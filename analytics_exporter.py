@@ -19,6 +19,7 @@ HEADERS = ["Timestamp", "Latitude", "Longitude", "Area_Zone", "Issues"]
 GOOGLE_SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.metadata.readonly",
+    "https://www.googleapis.com/auth/drive.file",
 ]
 
 _export_lock = asyncio.Lock()

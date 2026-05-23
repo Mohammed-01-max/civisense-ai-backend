@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     GOOGLE_SHEET_ID: str = ""
     GOOGLE_SHEET_NAME: str = ""
     GOOGLE_SHEET_TAB_NAME: str = ""
+    GOOGLE_DRIVE_FOLDER_ID: str = ""
 
     class Config:
         env_file = ".env"

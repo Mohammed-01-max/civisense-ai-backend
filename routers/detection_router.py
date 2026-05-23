@@ -1,5 +1,6 @@
 import io
 import os
+import uuid
 import numpy as np
 from fastapi import APIRouter, Depends, File, Form, UploadFile, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -7,7 +8,9 @@ from sqlalchemy import select, func
 from sqlalchemy.orm import selectinload
 from PIL import Image
 
+from config import settings
 from database import get_db
+from google_storage import upload_image_to_drive
 from auth import get_current_user
 import models, schemas
 
@@ -154,6 +157,24 @@ async def submit_report(
 
     final_issues = [CLASS_MAPPING.get(cls, cls) for cls in detected_raw]
 
+    # Store the uploaded image in Google Drive and keep a public link.
+    file_ext = os.path.splitext(file.filename or ".jpg")[1].lower()
+    if file_ext not in {".jpg", ".jpeg", ".png", ".gif", ".webp"}:
+        file_ext = ".jpg"
+
+    drive_file_name = f"report_{uuid.uuid4().hex}{file_ext}"
+    mime_type = file.content_type or ("image/png" if file_ext == ".png" else "image/jpeg")
+
+    try:
+        image_url = upload_image_to_drive(
+            contents,
+            drive_file_name,
+            mime_type=mime_type,
+            folder_id=settings.GOOGLE_DRIVE_FOLDER_ID or None,
+        )
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"Failed to upload report image: {exc}")
+
     # Persist
     issue_number = await generate_issue_number(db)
     report = models.Report(
@@ -162,6 +183,7 @@ async def submit_report(
         latitude=lat_f,
         longitude=lon_f,
         area_zone=get_area_name(lat_f, lon_f),
+        image_url=image_url,
         description=description or None,
         status=models.IssueStatus.pending,
     )

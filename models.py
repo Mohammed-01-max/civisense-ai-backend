@@ -39,6 +39,7 @@ class Report(Base):
     latitude     = Column(Float, nullable=False)
     longitude    = Column(Float, nullable=False)
     area_zone    = Column(String, nullable=True)
+    image_url    = Column(String, nullable=True)
     description  = Column(String, nullable=True)   # optional free-text from submitter
     status       = Column(Enum(IssueStatus), default=IssueStatus.pending, nullable=False)
     resolved_at  = Column(DateTime(timezone=True), nullable=True)

@@ -47,6 +47,7 @@ class ReportOut(BaseModel):
     latitude:     float
     longitude:    float
     area_zone:    Optional[str]
+    image_url:    Optional[str]
     description:  Optional[str]
     status:       IssueStatus
     resolved_at:  Optional[datetime]
