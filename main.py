@@ -1,9 +1,13 @@
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
 
-from database import engine, Base
+from database import engine, Base, get_db
 from routers import auth_router, detection_router, analytics_router, authority_router
+import models
 
 
 @asynccontextmanager
@@ -27,6 +31,20 @@ app.include_router(auth_router.router)
 app.include_router(detection_router.router)
 app.include_router(analytics_router.router)
 app.include_router(authority_router.router)
+
+
+@app.get("/api/images/{image_id}")
+async def get_image(image_id: int, db: AsyncSession = Depends(get_db)):
+    """Retrieve image from database."""
+    image = await db.scalar(select(models.Image).where(models.Image.id == image_id))
+    if not image:
+        return {"error": "Image not found"}
+    
+    return StreamingResponse(
+        iter([image.data]),
+        media_type=image.mime_type,
+        headers={"Content-Disposition": f"inline; filename=image_{image_id}"}
+    )
 
 
 @app.get("/")

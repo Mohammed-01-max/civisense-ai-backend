@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, Enum
+from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, Enum, LargeBinary
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from database import Base
@@ -57,3 +57,15 @@ class Detection(Base):
     issue_type = Column(String, nullable=False)
 
     report = relationship("Report", back_populates="detections")
+
+
+class Image(Base):
+    __tablename__ = "images"
+
+    id         = Column(Integer, primary_key=True, index=True)
+    report_id  = Column(Integer, ForeignKey("reports.id"), nullable=False, unique=True)
+    mime_type  = Column(String, nullable=False, default="image/jpeg")
+    data       = Column(LargeBinary, nullable=False)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+    report = relationship("Report")
