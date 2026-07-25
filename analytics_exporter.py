@@ -14,7 +14,7 @@ import models
 
 logger = logging.getLogger(__name__)
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 HEADERS = ["Timestamp", "Latitude", "Longitude", "Area_Zone", "Issues"]
 
 _export_lock = asyncio.Lock()

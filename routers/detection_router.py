@@ -15,6 +15,16 @@ import models, schemas
 
 router = APIRouter(prefix="/reports", tags=["reports"])
 
+CONFIDENCE_THRESHOLDS = {
+    "broken": 0.75,                # Divider model
+    "Not Working": 0.65,            # Streetlight model
+    "tangled_broken_wires": 0.85,  # Wires model
+    "pothole": 0.80,               # Potholes model
+    "garbage": 0.60,               # Garbage model
+}
+DEFAULT_THRESHOLD = 0.70
+
+
 # ── YOLO model loading ────────────────────────────────────────────────────────
 
 MODEL_BASENAMES = [
@@ -151,8 +161,15 @@ async def submit_report(
     for model in yolo_models:
         results = model(img_np, conf=0.4, verbose=False)
         for r in results:
-            for c in r.boxes.cls:
-                detected_raw.add(model.names[int(c)])
+            for box in r.boxes:
+                cls_id = int(box.cls[0])
+                class_name = model.names[cls_id]
+                confidence = float(box.conf[0])
+
+                required_conf = CONFIDENCE_THRESHOLDS.get(class_name, DEFAULT_THRESHOLD)
+
+                if confidence >= required_conf:
+                    detected_raw.add(class_name)
 
     final_issues = [CLASS_MAPPING.get(cls, cls) for cls in detected_raw]
 

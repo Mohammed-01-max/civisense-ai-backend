@@ -17,6 +17,9 @@ class Settings(BaseSettings):
     # API Configuration
     API_URL: str = "http://localhost:8000"
 
+    # Analytics export
+    ANALYTICS_EXCEL_PATH: str = "analytics/analytics.xlsx"
+
     class Config:
         env_file = ".env"
 
