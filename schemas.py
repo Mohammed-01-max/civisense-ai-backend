@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, ConfigDict, EmailStr
 from datetime import datetime
 from typing import List, Optional
 from models import UserRole, IssueStatus
@@ -7,10 +7,13 @@ from models import UserRole, IssueStatus
 # ── Auth ──────────────────────────────────────────────────────────────────────
 
 class UserRegister(BaseModel):
+    # Public registration is deliberately citizen-only. Rejecting unknown
+    # fields prevents clients from silently attempting role escalation.
+    model_config = ConfigDict(extra="forbid")
+
     email:     EmailStr
     password:  str
     full_name: Optional[str] = None
-    role:      UserRole = UserRole.citizen
 
 
 class UserOut(BaseModel):

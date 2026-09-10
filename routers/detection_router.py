@@ -1,4 +1,3 @@
-import io
 import os
 import uuid
 import numpy as np
@@ -6,11 +5,11 @@ from fastapi import APIRouter, Depends, File, Form, UploadFile, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
 from sqlalchemy.orm import selectinload
-from PIL import Image
 
 from database import get_db
 from google_storage import upload_image_to_drive
 from auth import get_current_user
+from image_validation import read_and_validate_image
 import models, schemas
 
 router = APIRouter(prefix="/reports", tags=["reports"])
@@ -152,9 +151,8 @@ async def submit_report(
     except ValueError:
         raise HTTPException(status_code=422, detail="lat/lon must be numeric")
 
-    # Run YOLO inference
-    contents = await file.read()
-    img      = Image.open(io.BytesIO(contents)).convert("RGB")
+    # Validate the upload before it reaches the expensive inference path.
+    contents, img, mime_type, file_ext = await read_and_validate_image(file)
     img_np   = np.array(img)
 
     detected_raw: set[str] = set()
@@ -172,12 +170,6 @@ async def submit_report(
                     detected_raw.add(class_name)
 
     final_issues = [CLASS_MAPPING.get(cls, cls) for cls in detected_raw]
-
-    # Determine MIME type
-    file_ext = os.path.splitext(file.filename or ".jpg")[1].lower()
-    if file_ext not in {".jpg", ".jpeg", ".png", ".gif", ".webp"}:
-        file_ext = ".jpg"
-    mime_type = file.content_type or ("image/png" if file_ext == ".png" else "image/jpeg")
 
     # Persist report first (without image URL)
     issue_number = await generate_issue_number(db)

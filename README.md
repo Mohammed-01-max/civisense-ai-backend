@@ -2,19 +2,18 @@
 CivicSafe Backend API
 
 ## Setup
-Create a `.env` file in the project root. At minimum, set:
+Create a `.env` file in the project root. Copy the variable names from
+`.env.example` and set, at minimum:
 
 ```env
-GOOGLE_SHEET_ID=your_google_sheet_id
+DATABASE_URL=postgresql+asyncpg://USER:PASSWORD@HOST:PORT/DATABASE
+SECRET_KEY=use-a-random-secret-with-at-least-32-characters
+CORS_ORIGINS=http://localhost:8080,http://127.0.0.1:8080
 ```
 
-Keep the service account JSON in the project root as:
-
-```text
-hexart-civicsafe-ed0da593f434.json
-```
-
-If you want uploaded report images stored in a specific Drive folder, set `GOOGLE_DRIVE_FOLDER_ID` in `.env`. Otherwise files will be saved in the service account drive root.
+The application refuses to start without `DATABASE_URL`, `SECRET_KEY`, and an
+explicit `CORS_ORIGINS` allowlist. Never commit a real `.env` file. Report
+images are currently stored in the database, not Google Drive.
 
 ## Run With uv
 The project is configured for Python 3.11 through `.python-version`.
