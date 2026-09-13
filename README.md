@@ -1,7 +1,9 @@
 # civicsafe-backend
+
 CivicSafe Backend API
 
 ## Setup
+
 Create a `.env` file in the project root. Copy the variable names from
 `.env.example` and set, at minimum:
 
@@ -15,7 +17,13 @@ The application refuses to start without `DATABASE_URL`, `SECRET_KEY`, and an
 explicit `CORS_ORIGINS` allowlist. Never commit a real `.env` file. Report
 images are currently stored in the database, not Google Drive.
 
+Alembic migration scaffolding and a model baseline are present under
+`alembic/`. The baseline has not been applied or stamped against any existing
+database. Production schema changes must remain disabled until the live schema
+has been inspected and the baseline has been explicitly validated.
+
 ## Run With uv
+
 The project is configured for Python 3.11 through `.python-version`.
 
 ```powershell
@@ -24,6 +32,7 @@ uv run uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
 ## Run With pip
+
 If you prefer pip, create a virtual environment and install `requirements.txt`.
 
 ```powershell
@@ -34,6 +43,7 @@ python -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
 ## API Docs
+
 After the server starts, open:
 
 - `http://127.0.0.1:8000/docs`
