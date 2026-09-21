@@ -1,0 +1,60 @@
+{
+  "artifact_type": "CIVISENSE AI severity production model",
+  "task_type": "three-class severity classification",
+  "input_feature": "text_en",
+  "class_mapping": {
+    "LOW": 0,
+    "MEDIUM": 1,
+    "HIGH": 2
+  },
+  "tfidf_configuration": {
+    "lowercase": true,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 20000,
+    "min_df": 2,
+    "sublinear_tf": true,
+    "strip_accents": "unicode",
+    "sparse": true,
+    "dense_conversion": false,
+    "fit_data": "train_plus_dev"
+  },
+  "xgboost_configuration": {
+    "objective": "multi:softprob",
+    "num_class": 3,
+    "n_estimators": 500,
+    "max_depth": 6,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1,
+    "eval_metric": "mlogloss",
+    "random_state": 42
+  },
+  "class_weights": {
+    "LOW": 0.4953867113,
+    "MEDIUM": 1.6440608303,
+    "HIGH": 2.6800670017
+  },
+  "random_seed": 42,
+  "train_row_count": 8000,
+  "dev_row_count": 1600,
+  "train_plus_dev_row_count": 9600,
+  "train_hash": "d78ff614fb14c5ea777c4a56bb5e69e30daf9ea053ba939b2f1cfe2ffd5d934b",
+  "dev_hash": "56d151234a17b704d4aba9e85af1e258cca7477c5369234687f6e859aac1ec70",
+  "feature_count": 20000,
+  "python_version": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+  "xgboost_version": "3.0.5",
+  "scikit_learn_version": "1.9.1",
+  "numpy_version": "2.4.4",
+  "creation_timestamp": "2026-09-21T05:34:07.585508+00:00",
+  "production_training_data": "train_plus_dev",
+  "test_used_for_training": false,
+  "test_used_for_selection": false,
+  "test_used_for_tuning": false,
+  "source_model_selection": "Step 2 weighted XGBoost",
+  "official_test_evaluation_reference": "backend/ai/severity_audit/severity_final_evaluation.json",
+  "training_configuration_sha256": "91230e49dee76f57af3293c6a167f551fc2e818c6c5681c191d5ccba427a78fa"
+}

@@ -6,7 +6,14 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from database import engine, Base, get_db
-from routers import auth_router, detection_router, analytics_router, authority_router
+from routers import (
+    admin_router,
+    auth_router,
+    detection_router,
+    analytics_router,
+    authority_router,
+    officer_router,
+)
 from auth import get_current_user
 from config import settings
 from image_access import require_image_access
@@ -34,6 +41,8 @@ app.include_router(auth_router.router)
 app.include_router(detection_router.router)
 app.include_router(analytics_router.router)
 app.include_router(authority_router.router)
+app.include_router(admin_router.router)
+app.include_router(officer_router.router)
 
 
 @app.get("/api/images/{image_id}")

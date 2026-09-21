@@ -83,7 +83,11 @@ class PublicRegistrationTests(unittest.IsolatedAsyncioTestCase):
 
     async def test_citizen_registration_still_creates_citizen(self):
         db = _RegistrationSession()
-        body = UserRegister(email="citizen@example.com", password="password")
+        body = UserRegister(
+            email="citizen@example.com",
+            password="password",
+            jurisdiction="GHMC",
+        )
         user = await register(body, db)
         self.assertEqual(user.role, UserRole.citizen)
         self.assertEqual(db.added.role, UserRole.citizen)

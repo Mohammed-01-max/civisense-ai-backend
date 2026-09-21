@@ -1,0 +1,6535 @@
+{
+  "normalization": {
+    "source_field": "text_en",
+    "unicode": "NFKC",
+    "lowercase": true,
+    "whitespace": "split_and_join_single_spaces",
+    "semantic_words_removed": false
+  },
+  "within_split": {
+    "train": {
+      "duplicate_groups": 119,
+      "affected_records": 386,
+      "label_agreement_groups": 119,
+      "label_conflict_groups": 0,
+      "score_agreement_groups": 119,
+      "score_conflict_groups": 0
+    },
+    "dev": {
+      "duplicate_groups": 13,
+      "affected_records": 34,
+      "label_agreement_groups": 13,
+      "label_conflict_groups": 0,
+      "score_agreement_groups": 13,
+      "score_conflict_groups": 0
+    },
+    "test": {
+      "duplicate_groups": 15,
+      "affected_records": 39,
+      "label_agreement_groups": 15,
+      "label_conflict_groups": 0,
+      "score_agreement_groups": 15,
+      "score_conflict_groups": 0
+    }
+  },
+  "cross_split": {
+    "train_to_dev": {
+      "duplicate_groups": 69,
+      "affected_records": 356,
+      "label_agreement_groups": 69,
+      "label_conflict_groups": 0,
+      "score_agreement_groups": 69,
+      "score_conflict_groups": 0,
+      "groups": [
+        {
+          "normalized_text_sha256": "01603343600412fb953c8c8d34f65b5fe848f8e37a7f89335e5ead958b218ed1",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004552",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_003482",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004546",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004547",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_004553",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004554",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004548",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "0a116511e27135853f7d2c7084975bd6a6afcbda608d6062e085dd786395fbe6",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_014381",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_014380",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "0df222fbbe9cf70f63c6faf97167be174164c960fde9e1fc793633fd0542eb4c",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_012074",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011902",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "146cb18288e6404ae3e0fb6c796f4fffd825348a9c9a71ea80429be78f989dcc",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_013519",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001468",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014060",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004496",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_001508",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_013886",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "148507bb0b763c07c08ea605bf172c80b73a69f5086a985103fc57f30b623bda",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_007501",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_009316",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015500",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015501",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "15adb1cbc7e2eb3b5412a5873118a0feb0996380b022c9316cd22e2ee86dd9ec",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_005839",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_005841",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "161989feb0a85a6b9f0b785c1022183a5a4548b28d48705bae1ae0dffd8665dc",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_002047",
+              "severity": "MEDIUM",
+              "severity_score": 3
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_002048",
+              "severity": "MEDIUM",
+              "severity_score": 3
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "17c4dc6e54bde219e64ff4c6a6102a44ef46c0b7a4e94101c3a23e9b9a5dcaaf",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_006694",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_006695",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_006696",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "180f2d20130eb41d648fec6e468b9268eccb56d9c21a9abe6c8ea8f36caa00a1",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_007834",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_007833",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "189e2bd15acb1b716ffce521fa49263408eac083b70eccd6fbda4a68ffe567e3",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_000201",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000211",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000503",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000204",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000196",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000206",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "18c9065e0cd47496313a4675c110afa1c2755d136343a66a0f23f6cd3331b1fc",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_007437",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_010594",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "1956f20b879f94a053ea168d25357f4bdb1d63348f35ebe09b10f83f7da55d1f",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_000040",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000555",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_007381",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_001646",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "1d235c16c528daf7584f42ea993de63f82fd402f429af3318011744a72ef543f",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_014653",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014650",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_014652",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "1d3b56c0a2743bdab7be8e342b94590c47af838d7dc69c873f2f14a35746f72a",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_010765",
+              "severity": "LOW",
+              "severity_score": 1
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_010767",
+              "severity": "LOW",
+              "severity_score": 1
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "1ecec0b7e5241d665eb709bebe85225998089b69fbfce89646804c1ba6111caf",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_009275",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009274",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009125",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_009276",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "29943f9b3a81c2c7995c78e0706253a6e623256a47cfa45b9a0869a152118988",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_012227",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015146",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012298",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011893",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012289",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012262",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "2b8965fb57f8e743f8028021591854791b83ef533da396e4caa4090eb24b0613",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_009514",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_009513",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "2e68ad50cf96c42c0426196a36a2c45744921736e579edeffd7625be9a9188b5",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_009744",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009878",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010008",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009549",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_005728",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009632",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009427",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_003046",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_006069",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_003045",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_005727",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_013759",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009078",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_005853",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_010319",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "32290355761390b8cf80225aeb5908e917bca43ee32d793e730f0c9e4a2c5986",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011413",
+              "severity": "MEDIUM",
+              "severity_score": 3
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011412",
+              "severity": "MEDIUM",
+              "severity_score": 3
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "4184505eba94b0b441ce0eb71def79268c57613df0736d37a98831e9a0d4901b",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_015557",
+              "severity": "HIGH",
+              "severity_score": 7
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015558",
+              "severity": "HIGH",
+              "severity_score": 7
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "4467fca9ae9437ae8d6adb8bcd27b805018dabffcd3a1e4eea5f45da84edbff8",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008545",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_006718",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001010",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010459",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014605",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009356",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001947",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008633",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001992",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_005251",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_009639",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_007817",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "450302bb293c8622905ebe71bdd6de9bf0f7995081c83109e4afb7c70b5bdc73",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008672",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004247",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_014419",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "454dcc1c557f2707c6dea499779b8a47c04c4cf11168dcfd8019f5f6f9da284d",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_001690",
+              "severity": "HIGH",
+              "severity_score": 7
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_001689",
+              "severity": "HIGH",
+              "severity_score": 7
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "4bbabc4b5c79e59f76a0717105069a03728b6310e1cbbf72aa191ce47532ede6",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_003261",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_002692",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_007907",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "4c55cd293028c81c0039c604d0606a36a996abe0cc94f2fe8e1112fdf8c93c72",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_005858",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001404",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008447",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_001406",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "4fbe8a62002c5024de9dc95da29bfe4ef3249b7b0f459b52434350e6dd3ff304",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011523",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012150",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011514",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011499",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012253",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012044",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012043",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011516",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011994",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "561c6867d68eb28f1c0d1b913d3f82ea7259ecf6351902bb1470eafc6e1d6480",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004007",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_004006",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "5d1417f24821404fdc06da7b24c5e4c2aca76bc2328d416339d5aca3b62222f3",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_010118",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_004541",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "5e14c22bdc2417860daeacc8624361e7ea874dfa41e60beeb3b304300ca249a6",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008987",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008934",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008983",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008938",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008937",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008985",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008984",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008939",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008935",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008982",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009205",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "6860f306172d08d01edb2b94f779878a7d37bd92fbf5061e6f2cd0d00f630596",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004202",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_004203",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "69d016961d48b1712c303b84064a817cee0b9ef2963b5d753f48f05bcc063663",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_007116",
+              "severity": "LOW",
+              "severity_score": 1
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_007115",
+              "severity": "LOW",
+              "severity_score": 1
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "6b0c362cb3b09dec44765d5ac26e243f65a5d593db4aa8815737482b7e12f57c",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_014042",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_010520",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "6c25d238dc1eb805fe456b4382614377d0f467e430489b6db5208f0b45263e34",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_012258",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012087",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "77dd0cfbf9411e7a3156cdbbfe7b56ca08ff0a3a83e8af29e9f7efdb880d88a1",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011787",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012308",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012315",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011877",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011390",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011799",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011797",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012312",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011798",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012316",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012317",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012025",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011948",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012318",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011937",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011790",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "79f5a938869b54be6778dc4b8806a3ce4bd6d126513b35507594242256398237",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_014416",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014401",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_014402",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_014425",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "89a3040611caab851d57afd080337d86c468a660c43d914ce433aadbbe93722e",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_005687",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_005342",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_005343",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_005638",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "8e5a173836c7dbef199ee1412b8886a4e2d82373a07b472cc1871b7ad13812f8",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_009397",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_009679",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "94f2f760d86a6077baa47ba969bb0065fe941b4b2334aafae1ba939df3622633",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_001234",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000382",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000376",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000028",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000256",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000380",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000379",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000370",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000384",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000349",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000889",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000245",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000269",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000043",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000383",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000347",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000371",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000350",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001624",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000888",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000346",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000381",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000307",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000378",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000244",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000351",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000386",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000243",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "99fc6818482baf6c9f54d5f766dd1e8f9116eda74d086b7b64e7959d9c9e6785",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011510",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011511",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011671",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "9a0f12f1ca6129cf71b4ad312119c78e37fd3397c89e69b3cbaa1ce404100233",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_006503",
+              "severity": "MEDIUM",
+              "severity_score": 3
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_006504",
+              "severity": "MEDIUM",
+              "severity_score": 3
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "9b6736ad42876e689da83b0a0bab593bb6faa24c2e6d8fbc55ea5c4af8da807d",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008733",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008734",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008732",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "9d096c885d02d01cc873491f83ad02f5d3cb310ce6b98233a3f96fdf59418a6d",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_002910",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_002912",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_002908",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "9e37291c78ffc1757b8d1f1fe0aabb2a89d7c5cf4cac2d76e82f40de61ee4396",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008557",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008556",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "a00c0ed2ed6140e456e4756def5486bb7ec2d989f07b4a6cfbef01fb3018de7b",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_003481",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_013273",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004790",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_004708",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_014544",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015241",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_014316",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015575",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "a58f46179c36e14fb5653c6c5850e999dcfd367f8b5fea5d1eeca3b34899073c",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011904",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012045",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011788",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011789",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011896",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011987",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012055",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011891",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011950",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011993",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015086",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011783",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "a67c083b76b92ecc848ebb86e9173cc239f653fef99f4af8189d1587c768c658",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_010805",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010802",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010803",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_010804",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "a6e939f9ad48efe8d8fd863ff224c72da9bc4e676ab50f70dee4bae72aa1740b",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_009330",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009296",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009300",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009299",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009331",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009298",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009332",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009301",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_009305",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "ada7c47db15e85d7602e71680643577b7312323b4237c2d082572e942a7bafb9",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_012113",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012110",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012112",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "b409776ef3619a9bf07cf45ee6e3ee9230087039b1a5cd880e9f0504a37a135f",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_005518",
+              "severity": "HIGH",
+              "severity_score": 10
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_005519",
+              "severity": "HIGH",
+              "severity_score": 10
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "b98807a530a97c9ebf281b135a2e2d34c57cf7b3a5d96d5ec1d8fd199e816adc",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_001417",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_001416",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_001419",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "bc393426ecf374c832fd38a7c940a65ecb7d1f1cf5d90ae487a435b2e872e7c1",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004074",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008324",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_005926",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008441",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014084",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_007110",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_002079",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015794",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000086",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_007708",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004621",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015573",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014276",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014841",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014035",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008944",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008189",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009249",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008446",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000375",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_002156",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015456",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014694",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010692",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001735",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_007916",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015167",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_010664",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000647",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_001734",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009255",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009256",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011966",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015399",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "bddd1e9173bdf155d37bf01a04054d1c8fd531a42ba56f6ed585acf77cb59d99",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_015305",
+              "severity": "LOW",
+              "severity_score": 1
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015304",
+              "severity": "LOW",
+              "severity_score": 1
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015306",
+              "severity": "LOW",
+              "severity_score": 1
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "be9caeecffdbaf676420cb9d136a41edd07e7f5594de8402455c827e2fe14541",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011493",
+              "severity": "LOW",
+              "severity_score": 1
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011492",
+              "severity": "LOW",
+              "severity_score": 1
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "c65a426c6c4f89a08cbfd5026eb40e38cb81ffb15aec4b6639acbbc873ef9011",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_013390",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_013391",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_013389",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "ce6bec34f3d6bc9d23865743dfd9390be8f222abb2ace200efe724da14f329ee",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011947",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012314",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012173",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012313",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "ceed2c92de6204d3fd6153e87b0b147e32c26e26f085fb7949bb8b7b868522f6",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_006630",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_006631",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d0ae98a91b192e5165548953a0d8e2ad9fd54dccd9d88d5293221c5b67ff29ff",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_010277",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_010275",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d14fd52d93cc1579a5a6610cd9ca436bdbca96f3dbf8c18056d31d7b7e3e15ce",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004093",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000701",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_004754",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d287736a7cbe8eacb0285801dc937a5d2c454c68e3d87d5d80df2e40b58af036",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011775",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011735",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011793",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011876",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011776",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011769",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011894",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011732",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011822",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011663",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011777",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011906",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011786",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011728",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011734",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011774",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012319",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011778",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012320",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011828",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d716b0b577194cc7e0b9b926127dbf0a43b23a27d86a9ff12522bc277ecfddb3",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_012007",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011836",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004610",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d8253a876e5963716dea907db3e3813becd4c519646bd70728b2064c23b48f19",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_006952",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_002690",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_006683",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d9a99c31a9a47c1eff6e8d4d7de78ce9a892f7a15b72c65b64c54325ba22992c",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_005788",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009327",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_005704",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004666",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "dda28e78e96f65661b9236dcf554e74fa399ee1b4a56555c4112b0e9ec596dc0",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_007485",
+              "severity": "HIGH",
+              "severity_score": 13
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_007397",
+              "severity": "HIGH",
+              "severity_score": 13
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "e8f6e7f20cf0cbc0e6a78de4fb1e51f67bd32c842ea2912749322a07b559d82d",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_013570",
+              "severity": "HIGH",
+              "severity_score": 11
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_013571",
+              "severity": "HIGH",
+              "severity_score": 11
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "e971f735751789459951779d9c4f92843d56a438caa4a9e370b4482cfb0fbffa",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_002929",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_003018",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_003021",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "ea77612e75608b7445d35f9675711861130624a87d96dcc0092e0a04fe938cb7",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_012160",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012159",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012154",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012156",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "ef1fcc56a12403e3ab671278d8fea50317c15c20954dac8eb44335cb5d5a6883",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008563",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008569",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008566",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_008567",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "f465edc08b229243c042d452ecb84de82bf0349e17d727bbce2e20cf65d2224a",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008912",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008838",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008917",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008906",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008918",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008837",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008911",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_008907",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "fe39051aefaa8eccc31b9d3751df655beda92994ffe684c8f5b944abd723a7a5",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_003081",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012539",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015244",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014561",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008149",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000235",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000233",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000153",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        }
+      ]
+    },
+    "train_to_test": {
+      "duplicate_groups": 68,
+      "affected_records": 334,
+      "label_agreement_groups": 68,
+      "label_conflict_groups": 0,
+      "score_agreement_groups": 68,
+      "score_conflict_groups": 0,
+      "groups": [
+        {
+          "normalized_text_sha256": "01603343600412fb953c8c8d34f65b5fe848f8e37a7f89335e5ead958b218ed1",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004552",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_003482",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004546",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004547",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_004553",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004554",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004548",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "072d59c270f4ecb4695a62b1555455430e18254ba32de1b0765029f5d2ef89aa",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_005733",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_005732",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "098045212c56c074b89130421e840af2cf8fc8fe8556b91a39e4b6410b920322",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_007798",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_007797",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "098d66d5b0fd2c1aaaed023e3865b71b9c808cfe8ce1eb107ce1a3734f93f448",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_012732",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015736",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "0a6ee432338904bdfc90743844323426c83b180e201e48ef13346e4b5e239060",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004884",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_003938",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "0d68597e6918454ffe8a4d1e63a40b742c88e561ca162458bec556e1be952dc8",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008908",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000136",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010671",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000135",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_002960",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "1175daec5c8a5f6b1713e288b61004d619e77d6b334f85cbaae7d2fae466569b",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_006366",
+              "severity": "HIGH",
+              "severity_score": 6
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_006365",
+              "severity": "HIGH",
+              "severity_score": 6
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "1264f7919a1cbf9fdc4bca82dd211c12528ee82fef0fba41e443d18173a67632",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_002082",
+              "severity": "HIGH",
+              "severity_score": 10
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_002001",
+              "severity": "HIGH",
+              "severity_score": 10
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "1427ebab111129595606173f06e4c84fb36d59f134d4541f169e7b6a4fc8008b",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_013790",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_013788",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "146cb18288e6404ae3e0fb6c796f4fffd825348a9c9a71ea80429be78f989dcc",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_013519",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001468",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014060",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004496",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_001508",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_013886",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "148507bb0b763c07c08ea605bf172c80b73a69f5086a985103fc57f30b623bda",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_007501",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_009316",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015500",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015501",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "189e2bd15acb1b716ffce521fa49263408eac083b70eccd6fbda4a68ffe567e3",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_000201",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000211",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000503",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000204",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000196",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000206",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "1956f20b879f94a053ea168d25357f4bdb1d63348f35ebe09b10f83f7da55d1f",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_000040",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000555",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_007381",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_001646",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "1b7b4e1137efad88bc3d48a284ddffe2df9ffeac76f02e6bc5819ba588a6b2a6",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_012077",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011821",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011546",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012107",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_014906",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "20f843ce1930ac772d10a6870a235a2ccd0e969522bf23d36ef185ae9d5080a6",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_000081",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000083",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "284ceaa7eb862d3feaaa8cde38bd87b7e8cde97af03c78f68f4eb6d60727e051",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004264",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004266",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "297c37d173d4c91fa40ce7f927eb2dfab0d4f8715dd0b9e5db7683b7a7b401be",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004488",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004490",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "2cd81ae3fa557ec0e17f2f89811996d27fdbfb3933ef93690895fc6d730ecb42",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008410",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_008409",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "2d2d5b5f2a3d2a08f1e88c16ea2f423956874a250626bf21c4f512eb76ec6d69",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_009132",
+              "severity": "HIGH",
+              "severity_score": 6
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_007460",
+              "severity": "HIGH",
+              "severity_score": 6
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "2e68ad50cf96c42c0426196a36a2c45744921736e579edeffd7625be9a9188b5",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_009744",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009878",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010008",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009549",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_005728",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009632",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009427",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_003046",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_006069",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_003045",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_005727",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_013759",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009078",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_005853",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_010319",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "3acae020855eca52fb23a553d9c887b2d84633f2addb9d8a44d4b343854bb216",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_009887",
+              "severity": "MEDIUM",
+              "severity_score": 3
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009800",
+              "severity": "MEDIUM",
+              "severity_score": 3
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "3b9276a19046452c1e0b3e1edf674bbaded0356464b5e39b864b5cc965ae6616",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011519",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011513",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "3da25e58889ac04b524a31e7705a5d51b5a29594cdbf33d92b06d98a0d0d765a",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_010784",
+              "severity": "HIGH",
+              "severity_score": 6
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010789",
+              "severity": "HIGH",
+              "severity_score": 6
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010788",
+              "severity": "HIGH",
+              "severity_score": 6
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_010786",
+              "severity": "HIGH",
+              "severity_score": 6
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_010785",
+              "severity": "HIGH",
+              "severity_score": 6
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "3f339088f45b980b9ff9929690135c6a9928049f356645ffea4442ebd29631b2",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008986",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_001547",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "4078664a2b882d90c47a6037428b7363c12627aa3e85c553d00d7e5dab13ed0b",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_000133",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000246",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "443cafd3bee47b6b11df1a177967d9f9f45c133ed9453d8ef21839d0cebec79a",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_012099",
+              "severity": "HIGH",
+              "severity_score": 7
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012097",
+              "severity": "HIGH",
+              "severity_score": 7
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "4467fca9ae9437ae8d6adb8bcd27b805018dabffcd3a1e4eea5f45da84edbff8",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008545",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_006718",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001010",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010459",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014605",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009356",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001947",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008633",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001992",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_005251",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_009639",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_007817",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "4bbabc4b5c79e59f76a0717105069a03728b6310e1cbbf72aa191ce47532ede6",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_003261",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_002692",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_007907",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "4fbe8a62002c5024de9dc95da29bfe4ef3249b7b0f459b52434350e6dd3ff304",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011523",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012150",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011514",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011499",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012253",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012044",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012043",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011516",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011994",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "55d51c309ada4b81ae6a0931799976c3d6248fd6b545d2d33abda58c5c70d6b1",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011646",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011645",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "5a751b4cf40bae7d83b099a4100dbd41e2f7e8ba27b839bda5b3d8b543b44acd",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_010772",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_010770",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "5c78c2628cd46d5493f5284cf908bf9a381c3ee1961493f0a1c77d574cbee699",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_007784",
+              "severity": "HIGH",
+              "severity_score": 6
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_007785",
+              "severity": "HIGH",
+              "severity_score": 6
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "5e14c22bdc2417860daeacc8624361e7ea874dfa41e60beeb3b304300ca249a6",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008987",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008934",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008983",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008938",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008937",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008985",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008984",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008939",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008935",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008982",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009205",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "606c203180a13ea9d8243f3d77bf9cec325fa8a324b904f953c77cd3053d0626",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011586",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_014977",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "669a4d77e46b38b1f0b0073ff1553050da21d8643e548c28a26d4dcd0f25926f",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_015747",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015746",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "6a2a0b14ddba929ef87d6e416cb3b8e3cd3b6e32c8471b089956163614f0d2eb",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011632",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011631",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "6d7ed3e1a476746e8752f02d80124497db5041ba8f7f0db5433bb7612ca42a16",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_012416",
+              "severity": "LOW",
+              "severity_score": 1
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012417",
+              "severity": "LOW",
+              "severity_score": 1
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "73539f41992776b6b2f2aefad023267ee7ed42d3324e6fb5a5e953105ac59936",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_010763",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_010764",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "77dd0cfbf9411e7a3156cdbbfe7b56ca08ff0a3a83e8af29e9f7efdb880d88a1",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011787",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012308",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012315",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011877",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011390",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011799",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011797",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012312",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011798",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012316",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012317",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012025",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011948",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012318",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011937",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011790",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "79f5a938869b54be6778dc4b8806a3ce4bd6d126513b35507594242256398237",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_014416",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014401",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_014402",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_014425",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "81b9f1f03a4f5942c4a6c9612fdd1fb6cf719eb6b3a5d71cf40b894823913868",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_000036",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_003831",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "866beff768df8c5c2bb2c0efbc86db576ce424c88f477c370d82185c6a1f4ee6",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_001460",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001461",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_001457",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "89686a52453621033360bd14b6fe55a497e9384c12e659c25edffe970df28e63",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004136",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004137",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "8cb0a7552bd2d8b6af9157838af5db50aba16109987d17108ce651148547a7f6",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_002029",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_002027",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "8e7a2234d6008ac9879ecb9bb90895c3f458ea218e2547a71b4efb82373de650",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_005968",
+              "severity": "LOW",
+              "severity_score": 1
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_005967",
+              "severity": "LOW",
+              "severity_score": 1
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "94f2f760d86a6077baa47ba969bb0065fe941b4b2334aafae1ba939df3622633",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_001234",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000382",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000376",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000028",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000256",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000380",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000379",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000370",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000384",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000349",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000889",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000245",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000269",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000043",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000383",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000347",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000371",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000350",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001624",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000888",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000346",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000381",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000307",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000378",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000244",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000351",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000386",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000243",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "9667dd9c70ead6dd2c48c678165bcc1ea8f0cff5c504a766642f0e27e35228f3",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_014422",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014469",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_014439",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_014427",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "a00c0ed2ed6140e456e4756def5486bb7ec2d989f07b4a6cfbef01fb3018de7b",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_003481",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_013273",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004790",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_004708",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_014544",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015241",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_014316",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015575",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "a58f46179c36e14fb5653c6c5850e999dcfd367f8b5fea5d1eeca3b34899073c",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011904",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012045",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011788",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011789",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011896",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011987",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012055",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011891",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011950",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011993",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015086",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011783",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "bb0a708a8e407fde5d67921c78f206cb8d1d6c0b9d900eae6f62336b166bfa75",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_015467",
+              "severity": "HIGH",
+              "severity_score": 8
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015466",
+              "severity": "HIGH",
+              "severity_score": 8
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "bc2df66d872239b6f224f5ff1e2f92c26c43d5e3631b77321af8b688eb0e17ac",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_007058",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_007057",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "bc393426ecf374c832fd38a7c940a65ecb7d1f1cf5d90ae487a435b2e872e7c1",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004074",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008324",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_005926",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008441",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014084",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_007110",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_002079",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015794",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000086",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_007708",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004621",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015573",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014276",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014841",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014035",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008944",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008189",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009249",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008446",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000375",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_002156",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015456",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014694",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010692",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001735",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_007916",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015167",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_010664",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000647",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_001734",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009255",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009256",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011966",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015399",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "cccc481cddc9c6d2671b7e28bf807e47fe71002564380e54288a38839817641d",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011081",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011080",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "ccd55adf7845cd26a076258a8ceaa2dd2d09f6754df11134f818232cd50ec64d",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_015388",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_001011",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "cdd014767bcab0e4ee0562e4c9cbb8fefb878f4c90394fc2390dd0fe711f0c65",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_013202",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_010572",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "ce6bec34f3d6bc9d23865743dfd9390be8f222abb2ace200efe724da14f329ee",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011947",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012314",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012173",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012313",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d287736a7cbe8eacb0285801dc937a5d2c454c68e3d87d5d80df2e40b58af036",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011775",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011735",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011793",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011876",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011776",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011769",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011894",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011732",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011822",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011663",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011777",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011906",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011786",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011728",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011734",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011774",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012319",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011778",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012320",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011828",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d45f1c44f20e1fdc5e298f0b0447841a340869e2705578077cdefd4d3168029a",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_005278",
+              "severity": "MEDIUM",
+              "severity_score": 3
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_005276",
+              "severity": "MEDIUM",
+              "severity_score": 3
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d716b0b577194cc7e0b9b926127dbf0a43b23a27d86a9ff12522bc277ecfddb3",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_012007",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011836",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004610",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d97396946b1af59f9c0ffe9d64ef51f6c8824f538014ca461cb5b70947f5c0b4",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_014522",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014524",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014523",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_014525",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d9a99c31a9a47c1eff6e8d4d7de78ce9a892f7a15b72c65b64c54325ba22992c",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_005788",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009327",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_005704",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004666",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "e280fdea5d28caaf2d193021c70c8fba4b31fe047016c9f8ee54fe03c3cd948c",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011878",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012324",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "ef1fcc56a12403e3ab671278d8fea50317c15c20954dac8eb44335cb5d5a6883",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008563",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008569",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008566",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_008567",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "f465edc08b229243c042d452ecb84de82bf0349e17d727bbce2e20cf65d2224a",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008912",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008838",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008917",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008906",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008918",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008837",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008911",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_008907",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "f6eba6560186d78d31a0503a662d8b274c0a876f93e9ab85d1e9e172ee370b9c",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_006737",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_006736",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "f9d48feced6c90451eef0083dd9504b7864235c01ea97c58b2fa526dbeaaffc8",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_014547",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_014548",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "fa6338b495120a9f221ec19d61a26ae341340e613c501af55d36ad195bebd7f0",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_010757",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_010756",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "fe39051aefaa8eccc31b9d3751df655beda92994ffe684c8f5b944abd723a7a5",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_003081",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012539",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015244",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014561",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008149",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000235",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000233",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000153",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        }
+      ]
+    },
+    "dev_to_test": {
+      "duplicate_groups": 31,
+      "affected_records": 247,
+      "label_agreement_groups": 31,
+      "label_conflict_groups": 0,
+      "score_agreement_groups": 31,
+      "score_conflict_groups": 0,
+      "groups": [
+        {
+          "normalized_text_sha256": "01603343600412fb953c8c8d34f65b5fe848f8e37a7f89335e5ead958b218ed1",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004552",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_003482",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004546",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004547",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_004553",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004554",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004548",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "0be060ad6a2e95aacf4c9a39e453c86633aeb18d4d80d9956793ae07c7c3eaaf",
+          "records": [
+            {
+              "split": "dev",
+              "original_id": "BBMP_004267",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004270",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "146cb18288e6404ae3e0fb6c796f4fffd825348a9c9a71ea80429be78f989dcc",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_013519",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001468",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014060",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004496",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_001508",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_013886",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "148507bb0b763c07c08ea605bf172c80b73a69f5086a985103fc57f30b623bda",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_007501",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_009316",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015500",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015501",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "189e2bd15acb1b716ffce521fa49263408eac083b70eccd6fbda4a68ffe567e3",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_000201",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000211",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000503",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000204",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000196",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000206",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "1956f20b879f94a053ea168d25357f4bdb1d63348f35ebe09b10f83f7da55d1f",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_000040",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000555",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_007381",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_001646",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "2e68ad50cf96c42c0426196a36a2c45744921736e579edeffd7625be9a9188b5",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_009744",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009878",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010008",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009549",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_005728",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009632",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009427",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_003046",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_006069",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_003045",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_005727",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_013759",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009078",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_005853",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_010319",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "4467fca9ae9437ae8d6adb8bcd27b805018dabffcd3a1e4eea5f45da84edbff8",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008545",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_006718",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001010",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010459",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014605",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009356",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001947",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008633",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001992",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_005251",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_009639",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_007817",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "4bbabc4b5c79e59f76a0717105069a03728b6310e1cbbf72aa191ce47532ede6",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_003261",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_002692",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_007907",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "4fbe8a62002c5024de9dc95da29bfe4ef3249b7b0f459b52434350e6dd3ff304",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011523",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012150",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011514",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011499",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012253",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012044",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012043",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011516",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011994",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "56bc4d9709b0fe95ce6515b0797d1e04c2099522a4f345b0fae378908d854a2d",
+          "records": [
+            {
+              "split": "dev",
+              "original_id": "BBMP_006382",
+              "severity": "LOW",
+              "severity_score": 1
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_006383",
+              "severity": "LOW",
+              "severity_score": 1
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "5e14c22bdc2417860daeacc8624361e7ea874dfa41e60beeb3b304300ca249a6",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008987",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008934",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008983",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008938",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008937",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008985",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008984",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008939",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008935",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008982",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009205",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "7137bf65650e77a2019e7e8837c7855a49080694aad3277870249dfd91981e75",
+          "records": [
+            {
+              "split": "dev",
+              "original_id": "BBMP_002052",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_002051",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "77dd0cfbf9411e7a3156cdbbfe7b56ca08ff0a3a83e8af29e9f7efdb880d88a1",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011787",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012308",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012315",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011877",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011390",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011799",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011797",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012312",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011798",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012316",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012317",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012025",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011948",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012318",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011937",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011790",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "79f5a938869b54be6778dc4b8806a3ce4bd6d126513b35507594242256398237",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_014416",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014401",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_014402",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_014425",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "94f2f760d86a6077baa47ba969bb0065fe941b4b2334aafae1ba939df3622633",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_001234",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000382",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000376",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000028",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000256",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000380",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000379",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000370",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000384",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000349",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000889",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000245",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000269",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000043",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000383",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000347",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000371",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000350",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001624",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000888",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000346",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000381",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000307",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000378",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000244",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000351",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000386",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000243",
+              "severity": "MEDIUM",
+              "severity_score": 5
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "a00c0ed2ed6140e456e4756def5486bb7ec2d989f07b4a6cfbef01fb3018de7b",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_003481",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_013273",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004790",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_004708",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_014544",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015241",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_014316",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015575",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "a58f46179c36e14fb5653c6c5850e999dcfd367f8b5fea5d1eeca3b34899073c",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011904",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012045",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011788",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011789",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011896",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011987",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012055",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011891",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011950",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011993",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015086",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011783",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "bc393426ecf374c832fd38a7c940a65ecb7d1f1cf5d90ae487a435b2e872e7c1",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_004074",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008324",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_005926",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008441",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014084",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_007110",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_002079",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015794",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000086",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_007708",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_004621",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015573",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014276",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014841",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014035",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008944",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008189",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009249",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008446",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000375",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_002156",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015456",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014694",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_010692",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_001735",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_007916",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_015167",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_010664",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000647",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_001734",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009255",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009256",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011966",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015399",
+              "severity": "MEDIUM",
+              "severity_score": 4
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "ca8091ac1274fe8fa2490ff1eb2d0fbebbe804cc62bac5b695bc0381f30aba3a",
+          "records": [
+            {
+              "split": "dev",
+              "original_id": "BBMP_010202",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008395",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_002952",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "ce6bec34f3d6bc9d23865743dfd9390be8f222abb2ace200efe724da14f329ee",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011947",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012314",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012173",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012313",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d287736a7cbe8eacb0285801dc937a5d2c454c68e3d87d5d80df2e40b58af036",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_011775",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011735",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011793",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011876",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011776",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011769",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011894",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011732",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011822",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011663",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011777",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011906",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011786",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_011728",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011734",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011774",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_012319",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011778",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_012320",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011828",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d716b0b577194cc7e0b9b926127dbf0a43b23a27d86a9ff12522bc277ecfddb3",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_012007",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_011836",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004610",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "d9a99c31a9a47c1eff6e8d4d7de78ce9a892f7a15b72c65b64c54325ba22992c",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_005788",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_009327",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_005704",
+              "severity": "LOW",
+              "severity_score": 2
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_004666",
+              "severity": "LOW",
+              "severity_score": 2
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "eb966065bf57c87e0b3832ceea3d35a3ec8090f101233b8d416f4215bf7acc01",
+          "records": [
+            {
+              "split": "dev",
+              "original_id": "BBMP_015247",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_015248",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "ef1fcc56a12403e3ab671278d8fea50317c15c20954dac8eb44335cb5d5a6883",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008563",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008569",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008566",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_008567",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "f023f5c284140bb6570989f2c7f4a1f2b5790b4bda1a5ddf1bf94eeb7e6e1c40",
+          "records": [
+            {
+              "split": "dev",
+              "original_id": "BBMP_009278",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_009204",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "f0b92bdbf5fd3dc054f883dd63b34954b3e9eb42549a378b073d97e0c9748f1a",
+          "records": [
+            {
+              "split": "dev",
+              "original_id": "BBMP_014193",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_008670",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "f465edc08b229243c042d452ecb84de82bf0349e17d727bbce2e20cf65d2224a",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_008912",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008838",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008917",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008906",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008918",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008837",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_008911",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_008907",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "fe39051aefaa8eccc31b9d3751df655beda92994ffe684c8f5b944abd723a7a5",
+          "records": [
+            {
+              "split": "train",
+              "original_id": "BBMP_003081",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_012539",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_015244",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_014561",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_008149",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "train",
+              "original_id": "BBMP_000235",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "dev",
+              "original_id": "BBMP_000233",
+              "severity": "LOW",
+              "severity_score": 0
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_000153",
+              "severity": "LOW",
+              "severity_score": 0
+            }
+          ]
+        },
+        {
+          "normalized_text_sha256": "ff32cd866b6759a5a1a5e54ed80f0b93227213a15fde7baa04bcc6111bf8a295",
+          "records": [
+            {
+              "split": "dev",
+              "original_id": "BBMP_011102",
+              "severity": "HIGH",
+              "severity_score": 9
+            },
+            {
+              "split": "test",
+              "original_id": "BBMP_011106",
+              "severity": "HIGH",
+              "severity_score": 9
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "test_to_train": {
+    "affected_records": 88,
+    "affected_percentage": 5.5,
+    "same_severity_records": 88,
+    "different_severity_records": 0
+  }
+}

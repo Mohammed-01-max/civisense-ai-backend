@@ -1,0 +1,83 @@
+{
+  "artifact_paths": {
+    "severity_tfidf.joblib": "C:\\Users\\maazm\\OneDrive\\Desktop\\SmartGov-AI\\backend\\ai\\severity_artifact\\severity_tfidf.joblib",
+    "severity_xgboost.json": "C:\\Users\\maazm\\OneDrive\\Desktop\\SmartGov-AI\\backend\\ai\\severity_artifact\\severity_xgboost.json",
+    "severity_metadata.json": "C:\\Users\\maazm\\OneDrive\\Desktop\\SmartGov-AI\\backend\\ai\\severity_artifact\\severity_metadata.json"
+  },
+  "artifact_sha256": {
+    "severity_tfidf.joblib": "787f6c8ff679f3f4135923a9f0d274afd8201327f29e7e4c4adebbe473ac40d4",
+    "severity_xgboost.json": "615795568434fd626203689da0a0cef837a2fce74949409cce142c82f31cc677",
+    "severity_metadata.json": "b0042715092d0f7fcc6ab2612658ffa27dc1b92f8283bec20bc9098cb9a19d07"
+  },
+  "vectorizer_feature_count": 20000,
+  "model_feature_count": 20000,
+  "model_class_count": 3,
+  "class_mapping": {
+    "LOW": 0,
+    "MEDIUM": 1,
+    "HIGH": 2
+  },
+  "shap_version": "0.48.0",
+  "xgboost_version": "3.0.5",
+  "numpy_version": "2.4.4",
+  "sklearn_version": "1.9.1",
+  "scipy_version": "1.17.1",
+  "python_version": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+  "random_seed": 42,
+  "data_source": "train_plus_dev",
+  "train_row_count": 8000,
+  "dev_row_count": 1600,
+  "explanation_sample_count": 300,
+  "explanation_sample_per_class": 100,
+  "explanation_sample_class_counts": {
+    "LOW": 100,
+    "MEDIUM": 100,
+    "HIGH": 100
+  },
+  "sampling_methodology": "For each class, filter the concatenated TRAIN then DEV rows, shuffle eligible row positions with random.Random(42), select 100 positions, and emit selected rows in original eligible-row order. This sample is for explainability only, not validation or model selection.",
+  "test_used": false,
+  "test_accessed": false,
+  "model_retrained": false,
+  "vectorizer_refit": false,
+  "model_selection_performed": false,
+  "threshold_tuning_performed": false,
+  "tree_explainer_configuration": {
+    "constructor": "shap.TreeExplainer(model)",
+    "model": "frozen xgboost.Booster",
+    "model_output": "raw",
+    "feature_perturbation": "tree_path_dependent",
+    "check_additivity": "default; not disabled",
+    "approximate": false,
+    "background_dataset": null
+  },
+  "shap_output_representation": {
+    "original_type": "Explanation",
+    "original_dimensions": [
+      300,
+      20000,
+      3
+    ],
+    "normalized_dimensions": [
+      300,
+      20000,
+      3
+    ],
+    "normalized_representation": "samples x features x classes",
+    "sample_count": 300,
+    "feature_count": 20000,
+    "class_count": 3
+  },
+  "output_space": "raw XGBoost margin",
+  "additivity_validation": {
+    "formula": "base_value + sum(feature SHAP contributions)",
+    "comparison": "TreeExplainer raw-margin reconstruction vs Booster.predict(output_margin=True)",
+    "tolerance": 1e-05,
+    "maximum_absolute_reconstruction_error": 9.775161743164062e-06,
+    "mean_absolute_reconstruction_error": 8.971683769232186e-07,
+    "number_of_checks": 900,
+    "passed": true
+  },
+  "interpretation": "SHAP explains how input TF-IDF features contributed to the frozen model's predictions for the selected sample. It does not establish causality, label correctness, real-world severity, accuracy improvement, model validity, fairness, or absence of dataset bias.",
+  "statement": "SHAP explanations were generated from the frozen production severity model using a deterministic sample from TRAIN + DEV only. The TEST dataset was not accessed.",
+  "creation_timestamp": "2026-09-21T07:26:46.428617+00:00"
+}

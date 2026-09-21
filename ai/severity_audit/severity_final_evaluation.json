@@ -1,0 +1,243 @@
+{
+  "generated_at_utc": "2026-09-20T22:53:07.642036+00:00",
+  "python_version": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "package_versions": {
+    "xgboost": "3.0.5",
+    "numpy": "2.4.4"
+  },
+  "dataset_hashes": {
+    "train": "d78ff614fb14c5ea777c4a56bb5e69e30daf9ea053ba939b2f1cfe2ffd5d934b",
+    "dev": "56d151234a17b704d4aba9e85af1e258cca7477c5369234687f6e859aac1ec70",
+    "test": "4ca7a0eca9bf49c01c53085556ec4283bdae8e62483973c14994321a7e6e55ce"
+  },
+  "row_counts": {
+    "train": 8000,
+    "dev": 1600,
+    "test": 1600,
+    "non_contaminated_test": 1512
+  },
+  "class_mapping": {
+    "LOW": 0,
+    "MEDIUM": 1,
+    "HIGH": 2
+  },
+  "class_weights": {
+    "LOW": 0.4953867113,
+    "MEDIUM": 1.6440608303,
+    "HIGH": 2.6800670017
+  },
+  "tfidf": {
+    "lowercase": true,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 20000,
+    "min_df": 2,
+    "sublinear_tf": true,
+    "strip_accents": "unicode",
+    "fit_split": "train",
+    "transformed_splits": [
+      "train",
+      "dev",
+      "test"
+    ],
+    "vocabulary_size": 20000,
+    "train_shape": [
+      8000,
+      20000
+    ],
+    "dev_shape": [
+      1600,
+      20000
+    ],
+    "test_shape": [
+      1600,
+      20000
+    ],
+    "sparse": true,
+    "dense_conversion": false,
+    "runtime_seconds": 1.8986092999984976
+  },
+  "model_selection_basis": {
+    "selected_candidate": "xgboost_weighted",
+    "selection_metric": "dev_macro_f1",
+    "dev_macro_f1": 0.7872340325427526,
+    "dev_balanced_accuracy": 0.7741909813260377,
+    "dev_MEDIUM_f1": 0.6705202312138728,
+    "dev_HIGH_f1": 0.7616438356164383,
+    "test_used_for_selection": false
+  },
+  "model": {
+    "model_type": "xgboost_class_weighted",
+    "xgboost_version": "3.0.5",
+    "parameters": {
+      "objective": "multi:softprob",
+      "num_class": 3,
+      "n_estimators": 500,
+      "max_depth": 6,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "min_child_weight": 1,
+      "eval_metric": "mlogloss",
+      "random_state": 42,
+      "early_stopping_rounds": 30
+    },
+    "sample_weights_source": "train_only",
+    "dev_evaluation_for_early_stopping": true,
+    "best_iteration": 499,
+    "best_score": 0.3728493272433661,
+    "training_runtime_seconds": 291.6699679000012,
+    "prediction_runtime_seconds": 0.06586509999760892,
+    "probability_validation": {
+      "shape": [
+        1600,
+        3
+      ],
+      "all_rows_sum_to_one": true,
+      "minimum_row_sum": 0.9999998807907104,
+      "maximum_row_sum": 1.0000001192092896
+    }
+  },
+  "full_test_set": {
+    "label": "Full test set",
+    "metrics": {
+      "accuracy": 0.8675,
+      "macro_precision": 0.8183275166899674,
+      "macro_recall": 0.8016799029898353,
+      "macro_f1": 0.8073854307237242,
+      "weighted_precision": 0.8731912345208247,
+      "weighted_recall": 0.8675,
+      "weighted_f1": 0.8690746884592575,
+      "balanced_accuracy": 0.8016799029898353,
+      "log_loss": 0.36750906705856323,
+      "per_class": {
+        "LOW": {
+          "precision": 0.944337811900192,
+          "recall": 0.935361216730038,
+          "f1": 0.9398280802292264,
+          "support": 1052
+        },
+        "MEDIUM": {
+          "precision": 0.660377358490566,
+          "recall": 0.7469512195121951,
+          "f1": 0.7010014306151645,
+          "support": 328
+        },
+        "HIGH": {
+          "precision": 0.8502673796791443,
+          "recall": 0.7227272727272728,
+          "f1": 0.7813267813267813,
+          "support": 220
+        }
+      },
+      "confusion_matrix": [
+        [
+          984,
+          66,
+          2
+        ],
+        [
+          57,
+          245,
+          26
+        ],
+        [
+          1,
+          60,
+          159
+        ]
+      ]
+    }
+  },
+  "contamination_sensitivity_analysis": {
+    "label": "Test sensitivity analysis excluding exact train/test text contamination.",
+    "metrics": {
+      "accuracy": 0.8597883597883598,
+      "macro_precision": 0.8104026710052095,
+      "macro_recall": 0.7929891411703114,
+      "macro_f1": 0.7988943077672456,
+      "weighted_precision": 0.8660186488888685,
+      "weighted_recall": 0.8597883597883598,
+      "weighted_f1": 0.8615210753428182,
+      "balanced_accuracy": 0.7929891411703114,
+      "log_loss": 0.3836200535297394,
+      "per_class": {
+        "LOW": {
+          "precision": 0.9405737704918032,
+          "recall": 0.9310344827586207,
+          "f1": 0.9357798165137615,
+          "support": 986
+        },
+        "MEDIUM": {
+          "precision": 0.6470588235294118,
+          "recall": 0.7356687898089171,
+          "f1": 0.6885245901639344,
+          "support": 314
+        },
+        "HIGH": {
+          "precision": 0.8435754189944135,
+          "recall": 0.7122641509433962,
+          "f1": 0.7723785166240409,
+          "support": 212
+        }
+      },
+      "confusion_matrix": [
+        [
+          918,
+          66,
+          2
+        ],
+        [
+          57,
+          231,
+          26
+        ],
+        [
+          1,
+          60,
+          151
+        ]
+      ]
+    }
+  },
+  "contamination": {
+    "normalization": {
+      "source_field": "text_en",
+      "unicode": "NFKC",
+      "lowercase": true,
+      "whitespace": "split_and_join_single_spaces",
+      "trim": true,
+      "semantic_words_removed": false
+    },
+    "train_test_duplicate_groups": 68,
+    "affected_test_records": 88,
+    "affected_test_percentage": 5.5,
+    "label_agreement_groups": 68,
+    "label_conflict_groups": 0,
+    "label_agreement_records": 88,
+    "label_conflict_records": 0,
+    "score_agreement_groups": 68,
+    "score_conflict_groups": 0
+  },
+  "performance_difference_full_minus_non_contaminated": {
+    "accuracy": 0.0077116402116402805,
+    "macro_recall": 0.008690761819523884,
+    "macro_f1": 0.00849112295647858,
+    "balanced_accuracy": 0.008690761819523884,
+    "MEDIUM_f1": 0.012476840451230098,
+    "HIGH_f1": 0.00894826470274046
+  },
+  "integrity": {
+    "test_used_for_selection": false,
+    "test_used_for_tuning": false,
+    "test_used_for_class_weights": false,
+    "test_used_for_vectorizer_fit": false,
+    "test_used_for_feature_selection": false,
+    "forbidden_features_used": [],
+    "retrained_on_train_plus_dev": false,
+    "production_model_saved": false
+  }
+}

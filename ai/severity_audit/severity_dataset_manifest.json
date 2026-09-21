@@ -1,0 +1,469 @@
+{
+  "generated_at_utc": "2026-09-20T22:10:30.371061+00:00",
+  "python_version": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "dataset_paths": {
+    "train": "C:\\Users\\maazm\\Downloads\\archive\\DataCard\\train\\train.json",
+    "dev": "C:\\Users\\maazm\\Downloads\\archive\\DataCard\\dev\\dev.json",
+    "test": "C:\\Users\\maazm\\Downloads\\archive\\DataCard\\test\\test.json"
+  },
+  "dataset_sha256": {
+    "train": "d78ff614fb14c5ea777c4a56bb5e69e30daf9ea053ba939b2f1cfe2ffd5d934b",
+    "dev": "56d151234a17b704d4aba9e85af1e258cca7477c5369234687f6e859aac1ec70",
+    "test": "4ca7a0eca9bf49c01c53085556ec4283bdae8e62483973c14994321a7e6e55ce"
+  },
+  "row_counts": {
+    "train": 8000,
+    "dev": 1600,
+    "test": 1600
+  },
+  "field_names": [
+    "original_id",
+    "Complain_date",
+    "complaint_title",
+    "text_en",
+    "location_address",
+    "category_primary",
+    "category_secondary",
+    "resolution_status",
+    "comment_count",
+    "Hindi",
+    "Hinglish",
+    "severity",
+    "severity_score",
+    "high_keywords_matched",
+    "medium_keywords_matched"
+  ],
+  "missing_severity": 0,
+  "missing_text_en": 0,
+  "target": "severity",
+  "class_mapping": {
+    "LOW": 0,
+    "MEDIUM": 1,
+    "HIGH": 2
+  },
+  "distribution": {
+    "train": {
+      "labels": {
+        "HIGH": 995,
+        "LOW": 5383,
+        "MEDIUM": 1622
+      },
+      "label_proportions": {
+        "HIGH": 0.124375,
+        "LOW": 0.672875,
+        "MEDIUM": 0.20275
+      },
+      "scores": {
+        "0": 3084,
+        "1": 803,
+        "2": 1496,
+        "3": 680,
+        "4": 607,
+        "5": 335,
+        "6": 261,
+        "7": 208,
+        "8": 146,
+        "9": 115,
+        "10": 79,
+        "11": 61,
+        "12": 35,
+        "13": 28,
+        "14": 16,
+        "15": 14,
+        "16": 9,
+        "17": 8,
+        "18": 8,
+        "19": 2,
+        "20": 3,
+        "21": 1,
+        "23": 1
+      },
+      "score_min": 0,
+      "score_max": 23,
+      "score_to_labels": {
+        "0": [
+          "LOW"
+        ],
+        "1": [
+          "LOW"
+        ],
+        "2": [
+          "LOW"
+        ],
+        "3": [
+          "MEDIUM"
+        ],
+        "4": [
+          "MEDIUM"
+        ],
+        "5": [
+          "MEDIUM"
+        ],
+        "6": [
+          "HIGH"
+        ],
+        "7": [
+          "HIGH"
+        ],
+        "8": [
+          "HIGH"
+        ],
+        "9": [
+          "HIGH"
+        ],
+        "10": [
+          "HIGH"
+        ],
+        "11": [
+          "HIGH"
+        ],
+        "12": [
+          "HIGH"
+        ],
+        "13": [
+          "HIGH"
+        ],
+        "14": [
+          "HIGH"
+        ],
+        "15": [
+          "HIGH"
+        ],
+        "16": [
+          "HIGH"
+        ],
+        "17": [
+          "HIGH"
+        ],
+        "18": [
+          "HIGH"
+        ],
+        "19": [
+          "HIGH"
+        ],
+        "20": [
+          "HIGH"
+        ],
+        "21": [
+          "HIGH"
+        ],
+        "23": [
+          "HIGH"
+        ]
+      }
+    },
+    "dev": {
+      "labels": {
+        "HIGH": 201,
+        "LOW": 1066,
+        "MEDIUM": 333
+      },
+      "label_proportions": {
+        "HIGH": 0.125625,
+        "LOW": 0.66625,
+        "MEDIUM": 0.208125
+      },
+      "scores": {
+        "0": 643,
+        "1": 178,
+        "2": 245,
+        "3": 134,
+        "4": 119,
+        "5": 80,
+        "6": 49,
+        "7": 51,
+        "8": 25,
+        "9": 24,
+        "10": 12,
+        "11": 11,
+        "12": 6,
+        "13": 10,
+        "14": 4,
+        "15": 5,
+        "16": 3,
+        "17": 1
+      },
+      "score_min": 0,
+      "score_max": 17,
+      "score_to_labels": {
+        "0": [
+          "LOW"
+        ],
+        "1": [
+          "LOW"
+        ],
+        "2": [
+          "LOW"
+        ],
+        "3": [
+          "MEDIUM"
+        ],
+        "4": [
+          "MEDIUM"
+        ],
+        "5": [
+          "MEDIUM"
+        ],
+        "6": [
+          "HIGH"
+        ],
+        "7": [
+          "HIGH"
+        ],
+        "8": [
+          "HIGH"
+        ],
+        "9": [
+          "HIGH"
+        ],
+        "10": [
+          "HIGH"
+        ],
+        "11": [
+          "HIGH"
+        ],
+        "12": [
+          "HIGH"
+        ],
+        "13": [
+          "HIGH"
+        ],
+        "14": [
+          "HIGH"
+        ],
+        "15": [
+          "HIGH"
+        ],
+        "16": [
+          "HIGH"
+        ],
+        "17": [
+          "HIGH"
+        ]
+      }
+    },
+    "test": {
+      "labels": {
+        "HIGH": 220,
+        "LOW": 1052,
+        "MEDIUM": 328
+      },
+      "label_proportions": {
+        "HIGH": 0.1375,
+        "LOW": 0.6575,
+        "MEDIUM": 0.205
+      },
+      "scores": {
+        "0": 614,
+        "1": 170,
+        "2": 268,
+        "3": 116,
+        "4": 129,
+        "5": 83,
+        "6": 53,
+        "7": 47,
+        "8": 42,
+        "9": 25,
+        "10": 17,
+        "11": 8,
+        "12": 8,
+        "13": 4,
+        "14": 5,
+        "15": 5,
+        "16": 1,
+        "17": 2,
+        "18": 1,
+        "19": 1,
+        "20": 1
+      },
+      "score_min": 0,
+      "score_max": 20,
+      "score_to_labels": {
+        "0": [
+          "LOW"
+        ],
+        "1": [
+          "LOW"
+        ],
+        "2": [
+          "LOW"
+        ],
+        "3": [
+          "MEDIUM"
+        ],
+        "4": [
+          "MEDIUM"
+        ],
+        "5": [
+          "MEDIUM"
+        ],
+        "6": [
+          "HIGH"
+        ],
+        "7": [
+          "HIGH"
+        ],
+        "8": [
+          "HIGH"
+        ],
+        "9": [
+          "HIGH"
+        ],
+        "10": [
+          "HIGH"
+        ],
+        "11": [
+          "HIGH"
+        ],
+        "12": [
+          "HIGH"
+        ],
+        "13": [
+          "HIGH"
+        ],
+        "14": [
+          "HIGH"
+        ],
+        "15": [
+          "HIGH"
+        ],
+        "16": [
+          "HIGH"
+        ],
+        "17": [
+          "HIGH"
+        ],
+        "18": [
+          "HIGH"
+        ],
+        "19": [
+          "HIGH"
+        ],
+        "20": [
+          "HIGH"
+        ]
+      }
+    }
+  },
+  "forbidden_features": [
+    "comment_count",
+    "high_keywords_matched",
+    "medium_keywords_matched",
+    "original_id",
+    "resolution_status",
+    "severity_score"
+  ],
+  "feature_source": "text_en only",
+  "tfidf": {
+    "parameters": {
+      "lowercase": true,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "max_features": 20000,
+      "min_df": 2,
+      "sublinear_tf": true,
+      "strip_accents": "unicode"
+    },
+    "vocabulary_size": 20000,
+    "shapes": {
+      "train": [
+        8000,
+        20000
+      ],
+      "dev": [
+        1600,
+        20000
+      ],
+      "test": [
+        1600,
+        20000
+      ]
+    },
+    "nonzero_elements": {
+      "train": 404428,
+      "dev": 78596,
+      "test": 78492
+    },
+    "memory_bytes": {
+      "train": 4885140,
+      "dev": 949556,
+      "test": 948308
+    },
+    "fit_seconds": 1.4484077999950387,
+    "transform_seconds": 0.3850246999936644
+  },
+  "xgboost": {
+    "status": "PASS",
+    "xgboost_version": "3.0.5",
+    "runtime_seconds": 23.37064769999415,
+    "prediction_runtime_seconds": 0.013629099994432181,
+    "probability_shape": [
+      1600,
+      3
+    ],
+    "probability_row_sum_validation": {
+      "all_rows_sum_to_one": true,
+      "minimum_row_sum": 0.9999998807907104,
+      "maximum_row_sum": 1.0000001192092896
+    },
+    "parameters": {
+      "objective": "multi:softprob",
+      "num_class": 3,
+      "n_estimators": 50,
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "min_child_weight": 1,
+      "eval_metric": "mlogloss",
+      "random_state": 42
+    },
+    "metrics": {
+      "accuracy": 0.785,
+      "macro_precision": 0.7586669076232644,
+      "macro_recall": 0.5928570893987711,
+      "macro_f1": 0.6382674893437076,
+      "weighted_f1": 0.7546864576734253,
+      "balanced_accuracy": 0.5928570893987711,
+      "per_class": {
+        "LOW": {
+          "precision": 0.8067226890756303,
+          "recall": 0.9906191369606003,
+          "f1": 0.8892631578947369
+        },
+        "MEDIUM": {
+          "precision": 0.5645161290322581,
+          "recall": 0.3153153153153153,
+          "f1": 0.4046242774566474
+        },
+        "HIGH": {
+          "precision": 0.9047619047619048,
+          "recall": 0.472636815920398,
+          "f1": 0.6209150326797386
+        }
+      },
+      "confusion_matrix": [
+        [
+          1056,
+          10,
+          0
+        ],
+        [
+          218,
+          105,
+          10
+        ],
+        [
+          35,
+          71,
+          95
+        ]
+      ],
+      "log_loss": 0.5135767459869385,
+      "majority_accuracy": 0.672875
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "description": "SHAP-derived local explanations for one deterministic, high-confidence sample from each true class.",
+  "explanations": [
+    {
+      "source_row_identifier": "BBMP_007477",
+      "true_severity": "LOW",
+      "complaint_text": "Garbage collection not done",
+      "predicted_class_id": 0,
+      "predicted_class": "LOW",
+      "predicted_probabilities": {
+        "LOW": 0.9657706022262573,
+        "MEDIUM": 0.03082231432199478,
+        "HIGH": 0.0034071507398039103
+      },
+      "predicted_confidence": 0.9657706022262573,
+      "base_values": {
+        "LOW": 0.39450693130493164,
+        "MEDIUM": 0.5968643426895142,
+        "HIGH": 0.4318803548812866
+      },
+      "top_positive_contributing_features": [],
+      "top_negative_contributing_features": []
+    },
+    {
+      "source_row_identifier": "BBMP_002117",
+      "true_severity": "MEDIUM",
+      "complaint_text": "The main road near the railway underpass was dug up for pipeline repair and has not been rectified since then. The road is in extremely bad condition and can pose serious hazard for motorists. Please relay the road at the earliest. Thanks.",
+      "predicted_class_id": 1,
+      "predicted_class": "MEDIUM",
+      "predicted_probabilities": {
+        "LOW": 0.03691784664988518,
+        "MEDIUM": 0.9497241973876953,
+        "HIGH": 0.013357935473322868
+      },
+      "predicted_confidence": 0.9497241973876953,
+      "base_values": {
+        "LOW": 0.39450693130493164,
+        "MEDIUM": 0.5968643426895142,
+        "HIGH": 0.4318803548812866
+      },
+      "top_positive_contributing_features": [
+        {
+          "feature": "hazard",
+          "feature_index": 7488,
+          "shap_value": 0.6186890602111816,
+          "feature_value": 0.12638526142785853
+        },
+        {
+          "feature": "the earliest",
+          "feature_index": 16526,
+          "shap_value": 0.4172690510749817,
+          "feature_value": 0.10854879882538532
+        },
+        {
+          "feature": "was dug",
+          "feature_index": 19010,
+          "shap_value": 0.28650882840156555,
+          "feature_value": 0.1224403690037877
+        },
+        {
+          "feature": "serious",
+          "feature_index": 14879,
+          "shap_value": 0.19005121290683746,
+          "feature_value": 0.11394636029023325
+        },
+        {
+          "feature": "earliest",
+          "feature_index": 5702,
+          "shap_value": 0.16281118988990784,
+          "feature_value": 0.10492056187427061
+        },
+        {
+          "feature": "bad condition",
+          "feature_index": 2165,
+          "shap_value": 0.06575607508420944,
+          "feature_value": 0.11724344540998372
+        },
+        {
+          "feature": "road at",
+          "feature_index": 14209,
+          "shap_value": 0.045975759625434875,
+          "feature_value": 0.12957935140173044
+        },
+        {
+          "feature": "since",
+          "feature_index": 15122,
+          "shap_value": 0.03937627747654915,
+          "feature_value": 0.07998491229551191
+        },
+        {
+          "feature": "bad",
+          "feature_index": 2162,
+          "shap_value": 0.03908410668373108,
+          "feature_value": 0.0827088875293707
+        }
+      ],
+      "top_negative_contributing_features": [
+        {
+          "feature": "the main",
+          "feature_index": 16640,
+          "shap_value": -0.09789372980594635,
+          "feature_value": 0.11108159179658222
+        },
+        {
+          "feature": "road is",
+          "feature_index": 14326,
+          "shap_value": -0.03700984641909599,
+          "feature_value": 0.07727443800562159
+        },
+        {
+          "feature": "been",
+          "feature_index": 2515,
+          "shap_value": -0.0215357206761837,
+          "feature_value": 0.06591284926968653
+        },
+        {
+          "feature": "for",
+          "feature_index": 6444,
+          "shap_value": -0.015931924805045128,
+          "feature_value": 0.08601795014865456
+        },
+        {
+          "feature": "at",
+          "feature_index": 1961,
+          "shap_value": -0.01512428093701601,
+          "feature_value": 0.06403567436429139
+        }
+      ]
+    },
+    {
+      "source_row_identifier": "BBMP_011049",
+      "true_severity": "HIGH",
+      "complaint_text": "In the past few months, the stray dog problem has become dangerous for passers by and two-wheelers. They bark aggressively at people passing by, especially when they are carrying goods with them, women and kids are especially scared and in danger of being bitten. There has been so many incidents of two-wheelers meeting accidents and getting injured because of the dogs chasing them. Apart from that, they start barking horribly and continuously in the middle of the night causing disturbances. Few such incidences here and there would have been fine but the problem has become quite regular and dangerous in the past few months. There were dogs earlier as well but these have become super aggressive these days. Need urgent help before any untoward incident occurs.\nThanks a lot :)",
+      "predicted_class_id": 2,
+      "predicted_class": "HIGH",
+      "predicted_probabilities": {
+        "LOW": 2.7749979381042067e-07,
+        "MEDIUM": 0.00019926115055568516,
+        "HIGH": 0.9998005032539368
+      },
+      "predicted_confidence": 0.9998005032539368,
+      "base_values": {
+        "LOW": 0.39450693130493164,
+        "MEDIUM": 0.5968643426895142,
+        "HIGH": 0.4318803548812866
+      },
+      "top_positive_contributing_features": [
+        {
+          "feature": "dangerous",
+          "feature_index": 4912,
+          "shap_value": 3.8749728202819824,
+          "feature_value": 0.08536019190896163
+        },
+        {
+          "feature": "urgent",
+          "feature_index": 18559,
+          "shap_value": 1.3882009983062744,
+          "feature_value": 0.06624459738623745
+        },
+        {
+          "feature": "danger",
+          "feature_index": 4907,
+          "shap_value": 0.9970122575759888,
+          "feature_value": 0.06882572692010996
+        },
+        {
+          "feature": "injured",
+          "feature_index": 8391,
+          "shap_value": 0.8807654976844788,
+          "feature_value": 0.07791194138543767
+        },
+        {
+          "feature": "accidents",
+          "feature_index": 403,
+          "shap_value": 0.6010541319847107,
+          "feature_value": 0.05322356196083933
+        },
+        {
+          "feature": "problem",
+          "feature_index": 13300,
+          "shap_value": 0.24188998341560364,
+          "feature_value": 0.08153699159681697
+        },
+        {
+          "feature": "many",
+          "feature_index": 10371,
+          "shap_value": 0.12023240327835083,
+          "feature_value": 0.03896200684834046
+        },
+        {
+          "feature": "dangerous for",
+          "feature_index": 4917,
+          "shap_value": 0.09486615657806396,
+          "feature_value": 0.06723870428498022
+        },
+        {
+          "feature": "people",
+          "feature_index": 12624,
+          "shap_value": 0.09010190516710281,
+          "feature_value": 0.03344048667280338
+        }
+      ],
+      "top_negative_contributing_features": [
+        {
+          "feature": "dogs",
+          "feature_index": 5333,
+          "shap_value": -0.14869163930416107,
+          "feature_value": 0.078670170875699
+        },
+        {
+          "feature": "they",
+          "feature_index": 17187,
+          "shap_value": -0.11471489816904068,
+          "feature_value": 0.07804344701549558
+        },
+        {
+          "feature": "months",
+          "feature_index": 10663,
+          "shap_value": -0.09355035424232483,
+          "feature_value": 0.07745835059370058
+        },
+        {
+          "feature": "causing",
+          "feature_index": 3412,
+          "shap_value": -0.07394348084926605,
+          "feature_value": 0.04423252925162844
+        },
+        {
+          "feature": "for",
+          "feature_index": 6444,
+          "shap_value": -0.04591496288776398,
+          "feature_value": 0.026852729243285713
+        }
+      ]
+    }
+  ]
+}

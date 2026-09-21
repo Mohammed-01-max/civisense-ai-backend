@@ -1,0 +1,923 @@
+{
+  "description": "Class-specific features with greater average absolute SHAP contribution magnitude for the frozen model on the explanation sample; not causal features.",
+  "classes": [
+    {
+      "class_id": 0,
+      "class_name": "LOW",
+      "features": [
+        {
+          "rank": 1,
+          "feature": "issue",
+          "mean_abs_shap": 0.34610578417778015,
+          "feature_index": 8976
+        },
+        {
+          "rank": 2,
+          "feature": "asap",
+          "mean_abs_shap": 0.29005715250968933,
+          "feature_index": 1905
+        },
+        {
+          "rank": 3,
+          "feature": "accidents",
+          "mean_abs_shap": 0.27610501646995544,
+          "feature_index": 403
+        },
+        {
+          "rank": 4,
+          "feature": "immediately",
+          "mean_abs_shap": 0.24508170783519745,
+          "feature_index": 8070
+        },
+        {
+          "rank": 5,
+          "feature": "very",
+          "mean_abs_shap": 0.24357947707176208,
+          "feature_index": 18783
+        },
+        {
+          "rank": 6,
+          "feature": "problem",
+          "mean_abs_shap": 0.1846102923154831,
+          "feature_index": 13300
+        },
+        {
+          "rank": 7,
+          "feature": "potholes",
+          "mean_abs_shap": 0.1645931601524353,
+          "feature_index": 13199
+        },
+        {
+          "rank": 8,
+          "feature": "dangerous",
+          "mean_abs_shap": 0.1643090844154358,
+          "feature_index": 4912
+        },
+        {
+          "rank": 9,
+          "feature": "damaged",
+          "mean_abs_shap": 0.14730001986026764,
+          "feature_index": 4883
+        },
+        {
+          "rank": 10,
+          "feature": "to",
+          "mean_abs_shap": 0.14623194932937622,
+          "feature_index": 17770
+        },
+        {
+          "rank": 11,
+          "feature": "school",
+          "mean_abs_shap": 0.1461244523525238,
+          "feature_index": 14760
+        },
+        {
+          "rank": 12,
+          "feature": "request",
+          "mean_abs_shap": 0.13811108469963074,
+          "feature_index": 13859
+        },
+        {
+          "rank": 13,
+          "feature": "not working",
+          "mean_abs_shap": 0.1000220775604248,
+          "feature_index": 11475
+        },
+        {
+          "rank": 14,
+          "feature": "accident",
+          "mean_abs_shap": 0.09450927376747131,
+          "feature_index": 395
+        },
+        {
+          "rank": 15,
+          "feature": "urgent",
+          "mean_abs_shap": 0.0908065140247345,
+          "feature_index": 18559
+        },
+        {
+          "rank": 16,
+          "feature": "and",
+          "mean_abs_shap": 0.08878880739212036,
+          "feature_index": 887
+        },
+        {
+          "rank": 17,
+          "feature": "issues",
+          "mean_abs_shap": 0.08234681189060211,
+          "feature_index": 9019
+        },
+        {
+          "rank": 18,
+          "feature": "is",
+          "mean_abs_shap": 0.07553224265575409,
+          "feature_index": 8537
+        },
+        {
+          "rank": 19,
+          "feature": "problems",
+          "mean_abs_shap": 0.07073211669921875,
+          "feature_index": 13322
+        },
+        {
+          "rank": 20,
+          "feature": "hazard",
+          "mean_abs_shap": 0.07028539478778839,
+          "feature_index": 7488
+        },
+        {
+          "rank": 21,
+          "feature": "this",
+          "mean_abs_shap": 0.07025755196809769,
+          "feature_index": 17307
+        },
+        {
+          "rank": 22,
+          "feature": "pothole",
+          "mean_abs_shap": 0.06834925711154938,
+          "feature_index": 13187
+        },
+        {
+          "rank": 23,
+          "feature": "complaint",
+          "mean_abs_shap": 0.06660106033086777,
+          "feature_index": 4163
+        },
+        {
+          "rank": 24,
+          "feature": "light not",
+          "mean_abs_shap": 0.06609867513179779,
+          "feature_index": 9980
+        },
+        {
+          "rank": 25,
+          "feature": "dengue",
+          "mean_abs_shap": 0.06447635591030121,
+          "feature_index": 5095
+        },
+        {
+          "rank": 26,
+          "feature": "danger",
+          "mean_abs_shap": 0.0634416863322258,
+          "feature_index": 4907
+        },
+        {
+          "rank": 27,
+          "feature": "complaints",
+          "mean_abs_shap": 0.062162768095731735,
+          "feature_index": 4201
+        },
+        {
+          "rank": 28,
+          "feature": "broken",
+          "mean_abs_shap": 0.06165671721100807,
+          "feature_index": 2950
+        },
+        {
+          "rank": 29,
+          "feature": "smoke",
+          "mean_abs_shap": 0.061054084450006485,
+          "feature_index": 15324
+        },
+        {
+          "rank": 30,
+          "feature": "burning",
+          "mean_abs_shap": 0.057859547436237335,
+          "feature_index": 3023
+        },
+        {
+          "rank": 31,
+          "feature": "of",
+          "mean_abs_shap": 0.04935489222407341,
+          "feature_index": 11599
+        },
+        {
+          "rank": 32,
+          "feature": "fire",
+          "mean_abs_shap": 0.04906564950942993,
+          "feature_index": 6286
+        },
+        {
+          "rank": 33,
+          "feature": "temple",
+          "mean_abs_shap": 0.04729257524013519,
+          "feature_index": 16208
+        },
+        {
+          "rank": 34,
+          "feature": "the",
+          "mean_abs_shap": 0.03663518279790878,
+          "feature_index": 16356
+        },
+        {
+          "rank": 35,
+          "feature": "urgently",
+          "mean_abs_shap": 0.03562789410352707,
+          "feature_index": 18565
+        },
+        {
+          "rank": 36,
+          "feature": "every",
+          "mean_abs_shap": 0.035543620586395264,
+          "feature_index": 5979
+        },
+        {
+          "rank": 37,
+          "feature": "road",
+          "mean_abs_shap": 0.03266126289963722,
+          "feature_index": 14182
+        },
+        {
+          "rank": 38,
+          "feature": "immediate",
+          "mean_abs_shap": 0.030955161899328232,
+          "feature_index": 8066
+        },
+        {
+          "rank": 39,
+          "feature": "everyday",
+          "mean_abs_shap": 0.030371427536010742,
+          "feature_index": 6001
+        },
+        {
+          "rank": 40,
+          "feature": "dust",
+          "mean_abs_shap": 0.02794618345797062,
+          "feature_index": 5663
+        },
+        {
+          "rank": 41,
+          "feature": "health",
+          "mean_abs_shap": 0.02771536447107792,
+          "feature_index": 7531
+        },
+        {
+          "rank": 42,
+          "feature": "hospital",
+          "mean_abs_shap": 0.026261692866683006,
+          "feature_index": 7833
+        },
+        {
+          "rank": 43,
+          "feature": "it",
+          "mean_abs_shap": 0.024926960468292236,
+          "feature_index": 9042
+        },
+        {
+          "rank": 44,
+          "feature": "college",
+          "mean_abs_shap": 0.02356942556798458,
+          "feature_index": 3981
+        },
+        {
+          "rank": 45,
+          "feature": "are",
+          "mean_abs_shap": 0.019297029823064804,
+          "feature_index": 1549
+        },
+        {
+          "rank": 46,
+          "feature": "the earliest",
+          "mean_abs_shap": 0.018618451431393623,
+          "feature_index": 16526
+        },
+        {
+          "rank": 47,
+          "feature": "major",
+          "mean_abs_shap": 0.01591429114341736,
+          "feature_index": 10295
+        },
+        {
+          "rank": 48,
+          "feature": "bus stop",
+          "mean_abs_shap": 0.015063515864312649,
+          "feature_index": 3041
+        },
+        {
+          "rank": 49,
+          "feature": "on",
+          "mean_abs_shap": 0.015018930658698082,
+          "feature_index": 11888
+        },
+        {
+          "rank": 50,
+          "feature": "near",
+          "mean_abs_shap": 0.014648515731096268,
+          "feature_index": 11001
+        }
+      ]
+    },
+    {
+      "class_id": 1,
+      "class_name": "MEDIUM",
+      "features": [
+        {
+          "rank": 1,
+          "feature": "dangerous",
+          "mean_abs_shap": 0.21011310815811157,
+          "feature_index": 4912
+        },
+        {
+          "rank": 2,
+          "feature": "and",
+          "mean_abs_shap": 0.05103224143385887,
+          "feature_index": 887
+        },
+        {
+          "rank": 3,
+          "feature": "light not",
+          "mean_abs_shap": 0.03379785642027855,
+          "feature_index": 9980
+        },
+        {
+          "rank": 4,
+          "feature": "every",
+          "mean_abs_shap": 0.03182828798890114,
+          "feature_index": 5979
+        },
+        {
+          "rank": 5,
+          "feature": "not working",
+          "mean_abs_shap": 0.03119262307882309,
+          "feature_index": 11475
+        },
+        {
+          "rank": 6,
+          "feature": "the",
+          "mean_abs_shap": 0.029994172975420952,
+          "feature_index": 16356
+        },
+        {
+          "rank": 7,
+          "feature": "very",
+          "mean_abs_shap": 0.02909236215054989,
+          "feature_index": 18783
+        },
+        {
+          "rank": 8,
+          "feature": "some",
+          "mean_abs_shap": 0.02081024833023548,
+          "feature_index": 15402
+        },
+        {
+          "rank": 9,
+          "feature": "of",
+          "mean_abs_shap": 0.02012065425515175,
+          "feature_index": 11599
+        },
+        {
+          "rank": 10,
+          "feature": "street",
+          "mean_abs_shap": 0.019664272665977478,
+          "feature_index": 15789
+        },
+        {
+          "rank": 11,
+          "feature": "burning",
+          "mean_abs_shap": 0.016976801678538322,
+          "feature_index": 3023
+        },
+        {
+          "rank": 12,
+          "feature": "everyday",
+          "mean_abs_shap": 0.016546402126550674,
+          "feature_index": 6001
+        },
+        {
+          "rank": 13,
+          "feature": "the earliest",
+          "mean_abs_shap": 0.014107812196016312,
+          "feature_index": 16526
+        },
+        {
+          "rank": 14,
+          "feature": "asap",
+          "mean_abs_shap": 0.014014034532010555,
+          "feature_index": 1905
+        },
+        {
+          "rank": 15,
+          "feature": "please look",
+          "mean_abs_shap": 0.01365398708730936,
+          "feature_index": 13003
+        },
+        {
+          "rank": 16,
+          "feature": "am",
+          "mean_abs_shap": 0.013574791140854359,
+          "feature_index": 823
+        },
+        {
+          "rank": 17,
+          "feature": "to",
+          "mean_abs_shap": 0.013112523593008518,
+          "feature_index": 17770
+        },
+        {
+          "rank": 18,
+          "feature": "dust",
+          "mean_abs_shap": 0.012835423462092876,
+          "feature_index": 5663
+        },
+        {
+          "rank": 19,
+          "feature": "no water",
+          "mean_abs_shap": 0.012577083893120289,
+          "feature_index": 11304
+        },
+        {
+          "rank": 20,
+          "feature": "accidents",
+          "mean_abs_shap": 0.012382607907056808,
+          "feature_index": 403
+        },
+        {
+          "rank": 21,
+          "feature": "bengaluru",
+          "mean_abs_shap": 0.011491992510855198,
+          "feature_index": 2695
+        },
+        {
+          "rank": 22,
+          "feature": "garbage",
+          "mean_abs_shap": 0.010983593761920929,
+          "feature_index": 6802
+        },
+        {
+          "rank": 23,
+          "feature": "urgently",
+          "mean_abs_shap": 0.010750641115009785,
+          "feature_index": 18565
+        },
+        {
+          "rank": 24,
+          "feature": "completed",
+          "mean_abs_shap": 0.010510724037885666,
+          "feature_index": 4233
+        },
+        {
+          "rank": 25,
+          "feature": "everyone",
+          "mean_abs_shap": 0.010430879890918732,
+          "feature_index": 6014
+        },
+        {
+          "rank": 26,
+          "feature": "bus",
+          "mean_abs_shap": 0.010317685082554817,
+          "feature_index": 3033
+        },
+        {
+          "rank": 27,
+          "feature": "hazard",
+          "mean_abs_shap": 0.010011023841798306,
+          "feature_index": 7488
+        },
+        {
+          "rank": 28,
+          "feature": "requesting",
+          "mean_abs_shap": 0.009779253043234348,
+          "feature_index": 13894
+        },
+        {
+          "rank": 29,
+          "feature": "immediately",
+          "mean_abs_shap": 0.009074877016246319,
+          "feature_index": 8070
+        },
+        {
+          "rank": 30,
+          "feature": "is",
+          "mean_abs_shap": 0.008860629983246326,
+          "feature_index": 8537
+        },
+        {
+          "rank": 31,
+          "feature": "and it",
+          "mean_abs_shap": 0.008711718954145908,
+          "feature_index": 1141
+        },
+        {
+          "rank": 32,
+          "feature": "now",
+          "mean_abs_shap": 0.008707362227141857,
+          "feature_index": 11499
+        },
+        {
+          "rank": 33,
+          "feature": "one",
+          "mean_abs_shap": 0.008617068640887737,
+          "feature_index": 12016
+        },
+        {
+          "rank": 34,
+          "feature": "request you",
+          "mean_abs_shap": 0.008512066677212715,
+          "feature_index": 13886
+        },
+        {
+          "rank": 35,
+          "feature": "pothole",
+          "mean_abs_shap": 0.00849014800041914,
+          "feature_index": 13187
+        },
+        {
+          "rank": 36,
+          "feature": "very dangerous",
+          "mean_abs_shap": 0.00840400718152523,
+          "feature_index": 18791
+        },
+        {
+          "rank": 37,
+          "feature": "please",
+          "mean_abs_shap": 0.008251396007835865,
+          "feature_index": 12957
+        },
+        {
+          "rank": 38,
+          "feature": "request",
+          "mean_abs_shap": 0.007882429286837578,
+          "feature_index": 13859
+        },
+        {
+          "rank": 39,
+          "feature": "road is",
+          "mean_abs_shap": 0.007542647421360016,
+          "feature_index": 14326
+        },
+        {
+          "rank": 40,
+          "feature": "nagar",
+          "mean_abs_shap": 0.0074589489959180355,
+          "feature_index": 10918
+        },
+        {
+          "rank": 41,
+          "feature": "1st",
+          "mean_abs_shap": 0.007423434406518936,
+          "feature_index": 121
+        },
+        {
+          "rank": 42,
+          "feature": "smoke",
+          "mean_abs_shap": 0.0074011096730828285,
+          "feature_index": 15324
+        },
+        {
+          "rank": 43,
+          "feature": "even",
+          "mean_abs_shap": 0.006967702880501747,
+          "feature_index": 5925
+        },
+        {
+          "rank": 44,
+          "feature": "help",
+          "mean_abs_shap": 0.006938426289707422,
+          "feature_index": 7597
+        },
+        {
+          "rank": 45,
+          "feature": "everywhere",
+          "mean_abs_shap": 0.006833004765212536,
+          "feature_index": 6024
+        },
+        {
+          "rank": 46,
+          "feature": "it",
+          "mean_abs_shap": 0.006714676972478628,
+          "feature_index": 9042
+        },
+        {
+          "rank": 47,
+          "feature": "low",
+          "mean_abs_shap": 0.006700919475406408,
+          "feature_index": 10188
+        },
+        {
+          "rank": 48,
+          "feature": "problems",
+          "mean_abs_shap": 0.006613974459469318,
+          "feature_index": 13322
+        },
+        {
+          "rank": 49,
+          "feature": "riding",
+          "mean_abs_shap": 0.006605615373700857,
+          "feature_index": 14121
+        },
+        {
+          "rank": 50,
+          "feature": "to be",
+          "mean_abs_shap": 0.0064157722517848015,
+          "feature_index": 17813
+        }
+      ]
+    },
+    {
+      "class_id": 2,
+      "class_name": "HIGH",
+      "features": [
+        {
+          "rank": 1,
+          "feature": "dangerous",
+          "mean_abs_shap": 0.6985745429992676,
+          "feature_index": 4912
+        },
+        {
+          "rank": 2,
+          "feature": "asap",
+          "mean_abs_shap": 0.2357494831085205,
+          "feature_index": 1905
+        },
+        {
+          "rank": 3,
+          "feature": "immediately",
+          "mean_abs_shap": 0.22447209060192108,
+          "feature_index": 8070
+        },
+        {
+          "rank": 4,
+          "feature": "potholes",
+          "mean_abs_shap": 0.1934012770652771,
+          "feature_index": 13199
+        },
+        {
+          "rank": 5,
+          "feature": "accidents",
+          "mean_abs_shap": 0.13344183564186096,
+          "feature_index": 403
+        },
+        {
+          "rank": 6,
+          "feature": "issue",
+          "mean_abs_shap": 0.12243503332138062,
+          "feature_index": 8976
+        },
+        {
+          "rank": 7,
+          "feature": "problem",
+          "mean_abs_shap": 0.11708525568246841,
+          "feature_index": 13300
+        },
+        {
+          "rank": 8,
+          "feature": "request",
+          "mean_abs_shap": 0.11574521660804749,
+          "feature_index": 13859
+        },
+        {
+          "rank": 9,
+          "feature": "complaint",
+          "mean_abs_shap": 0.10968472808599472,
+          "feature_index": 4163
+        },
+        {
+          "rank": 10,
+          "feature": "hazardous",
+          "mean_abs_shap": 0.099861741065979,
+          "feature_index": 7494
+        },
+        {
+          "rank": 11,
+          "feature": "urgent",
+          "mean_abs_shap": 0.09428925067186356,
+          "feature_index": 18559
+        },
+        {
+          "rank": 12,
+          "feature": "damaged",
+          "mean_abs_shap": 0.08694785833358765,
+          "feature_index": 4883
+        },
+        {
+          "rank": 13,
+          "feature": "accident",
+          "mean_abs_shap": 0.07972674816846848,
+          "feature_index": 395
+        },
+        {
+          "rank": 14,
+          "feature": "very",
+          "mean_abs_shap": 0.07904624938964844,
+          "feature_index": 18783
+        },
+        {
+          "rank": 15,
+          "feature": "this",
+          "mean_abs_shap": 0.07347388565540314,
+          "feature_index": 17307
+        },
+        {
+          "rank": 16,
+          "feature": "are",
+          "mean_abs_shap": 0.06842146813869476,
+          "feature_index": 1549
+        },
+        {
+          "rank": 17,
+          "feature": "broken",
+          "mean_abs_shap": 0.0663873627781868,
+          "feature_index": 2950
+        },
+        {
+          "rank": 18,
+          "feature": "fire",
+          "mean_abs_shap": 0.06057184189558029,
+          "feature_index": 6286
+        },
+        {
+          "rank": 19,
+          "feature": "dangerously",
+          "mean_abs_shap": 0.059013672173023224,
+          "feature_index": 4927
+        },
+        {
+          "rank": 20,
+          "feature": "is",
+          "mean_abs_shap": 0.057751934975385666,
+          "feature_index": 8537
+        },
+        {
+          "rank": 21,
+          "feature": "traffic",
+          "mean_abs_shap": 0.055049896240234375,
+          "feature_index": 18233
+        },
+        {
+          "rank": 22,
+          "feature": "dengue",
+          "mean_abs_shap": 0.05227296054363251,
+          "feature_index": 5095
+        },
+        {
+          "rank": 23,
+          "feature": "to",
+          "mean_abs_shap": 0.04817191883921623,
+          "feature_index": 17770
+        },
+        {
+          "rank": 24,
+          "feature": "danger",
+          "mean_abs_shap": 0.04751761630177498,
+          "feature_index": 4907
+        },
+        {
+          "rank": 25,
+          "feature": "problems",
+          "mean_abs_shap": 0.0467204675078392,
+          "feature_index": 13322
+        },
+        {
+          "rank": 26,
+          "feature": "burning",
+          "mean_abs_shap": 0.041841451078653336,
+          "feature_index": 3023
+        },
+        {
+          "rank": 27,
+          "feature": "smoke",
+          "mean_abs_shap": 0.039049066603183746,
+          "feature_index": 15324
+        },
+        {
+          "rank": 28,
+          "feature": "not",
+          "mean_abs_shap": 0.03791825845837593,
+          "feature_index": 11347
+        },
+        {
+          "rank": 29,
+          "feature": "light not",
+          "mean_abs_shap": 0.036682598292827606,
+          "feature_index": 9980
+        },
+        {
+          "rank": 30,
+          "feature": "garbage",
+          "mean_abs_shap": 0.033084407448768616,
+          "feature_index": 6802
+        },
+        {
+          "rank": 31,
+          "feature": "issues",
+          "mean_abs_shap": 0.03169703483581543,
+          "feature_index": 9019
+        },
+        {
+          "rank": 32,
+          "feature": "urgently",
+          "mean_abs_shap": 0.030797841027379036,
+          "feature_index": 18565
+        },
+        {
+          "rank": 33,
+          "feature": "complaints",
+          "mean_abs_shap": 0.030423033982515335,
+          "feature_index": 4201
+        },
+        {
+          "rank": 34,
+          "feature": "school",
+          "mean_abs_shap": 0.02787676453590393,
+          "feature_index": 14760
+        },
+        {
+          "rank": 35,
+          "feature": "many",
+          "mean_abs_shap": 0.026535719633102417,
+          "feature_index": 10371
+        },
+        {
+          "rank": 36,
+          "feature": "not working",
+          "mean_abs_shap": 0.0250766072422266,
+          "feature_index": 11475
+        },
+        {
+          "rank": 37,
+          "feature": "please",
+          "mean_abs_shap": 0.022621572017669678,
+          "feature_index": 12957
+        },
+        {
+          "rank": 38,
+          "feature": "collapsed",
+          "mean_abs_shap": 0.02258618175983429,
+          "feature_index": 3892
+        },
+        {
+          "rank": 39,
+          "feature": "health",
+          "mean_abs_shap": 0.02128835767507553,
+          "feature_index": 7531
+        },
+        {
+          "rank": 40,
+          "feature": "hazard",
+          "mean_abs_shap": 0.020295090973377228,
+          "feature_index": 7488
+        },
+        {
+          "rank": 41,
+          "feature": "major",
+          "mean_abs_shap": 0.020091587677598,
+          "feature_index": 10295
+        },
+        {
+          "rank": 42,
+          "feature": "and",
+          "mean_abs_shap": 0.01976826600730419,
+          "feature_index": 887
+        },
+        {
+          "rank": 43,
+          "feature": "in",
+          "mean_abs_shap": 0.019281042739748955,
+          "feature_index": 8095
+        },
+        {
+          "rank": 44,
+          "feature": "very dangerous",
+          "mean_abs_shap": 0.01908104494214058,
+          "feature_index": 18791
+        },
+        {
+          "rank": 45,
+          "feature": "the",
+          "mean_abs_shap": 0.01855027861893177,
+          "feature_index": 16356
+        },
+        {
+          "rank": 46,
+          "feature": "injured",
+          "mean_abs_shap": 0.017125530168414116,
+          "feature_index": 8391
+        },
+        {
+          "rank": 47,
+          "feature": "severe",
+          "mean_abs_shap": 0.016070151701569557,
+          "feature_index": 14922
+        },
+        {
+          "rank": 48,
+          "feature": "due",
+          "mean_abs_shap": 0.016028551384806633,
+          "feature_index": 5567
+        },
+        {
+          "rank": 49,
+          "feature": "on",
+          "mean_abs_shap": 0.01542703341692686,
+          "feature_index": 11888
+        },
+        {
+          "rank": 50,
+          "feature": "road",
+          "mean_abs_shap": 0.015057185664772987,
+          "feature_index": 14182
+        }
+      ]
+    }
+  ]
+}

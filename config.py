@@ -29,6 +29,15 @@ class Settings(BaseSettings):
     #  - bcrypt (preferred for many deployments, requires bcrypt wheel)
     HASHING_SCHEME: str = "pbkdf2_sha256"
 
+    # Local path to the frozen DeBERTa-v3 classification model.
+    # Keep the model artifact outside the Git/OneDrive project tree.
+    DEBERTA_MODEL_PATH: str = ""
+
+    # Optional override for the frozen severity artifact directory.
+    # Leave empty to use the project-relative default (ai/severity_artifact/).
+    # Do not set to a machine-specific absolute path in version-controlled env files.
+    SEVERITY_ARTIFACT_DIR: str = ""
+
     # API Configuration
     API_URL: str = "http://localhost:8000"
 

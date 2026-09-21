@@ -13,6 +13,8 @@ engine = create_async_engine(
     db_url,
     echo=False,
     connect_args={"ssl": ssl_ctx},
+    pool_pre_ping=True,
+    pool_recycle=1800,
 )
 
 AsyncSessionLocal = sessionmaker(

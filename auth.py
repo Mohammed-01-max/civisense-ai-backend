@@ -87,3 +87,12 @@ async def require_authority(current_user: models.User = Depends(get_current_user
             detail="Authority access required",
         )
     return current_user
+
+
+async def require_officer(current_user: models.User = Depends(get_current_user)):
+    if current_user.role != models.UserRole.officer:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Officer access required",
+        )
+    return current_user

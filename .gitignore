@@ -2,8 +2,10 @@ __pycache__/
 *.py[cod]
 
 .venv/
+venv/
 
 .env
+.env.*
 hexart-civicsafe-ed0da593f434.json
 
 analytics_reports.xlsx
@@ -12,3 +14,7 @@ analytics_reports.xlsx
 server.out.log
 server.err.log
 *.pyc
+
+.pytest_cache/
+*.egg-info/
+dist/
