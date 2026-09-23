@@ -346,6 +346,29 @@ async def submit_report(
 
     await db.commit()
 
+    # Attempt to create REPORT_ASSIGNED notification for the assigned officer.
+    # This MUST NOT fail the report creation response.
+    if report.assigned_officer_id is not None:
+        try:
+            notification = models.Notification(
+                recipient_id=report.assigned_officer_id,
+                type="REPORT_ASSIGNED",
+                title="New Report Assigned",
+                body=f"Report {report.issue_number} has been assigned to you.",
+                report_id=report.id,
+                is_read=False,
+            )
+            db.add(notification)
+            await db.commit()
+        except Exception:
+            await db.rollback()
+            logger.exception(
+                "Failed to create REPORT_ASSIGNED notification for officer %s on report %s"
+                " — report creation succeeded",
+                report.assigned_officer_id,
+                report.issue_number,
+            )
+
     # Re-load the report with detections eagerly loaded so FastAPI/Pydantic
     # doesn't trigger async IO while serializing the response (which causes
     # `MissingGreenlet` errors). Use selectinload to fetch related detections.

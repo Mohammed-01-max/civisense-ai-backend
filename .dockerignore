@@ -1,0 +1,38 @@
+# Python byte-compiled artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# pytest cache
+.pytest_cache/
+
+# Virtual environments — never include in image
+.venv/
+.venv-corrupt-backup-20260920/
+
+# Local .env secrets — NEVER in Docker image
+.env
+.env.*
+!.env.example
+
+# Git history
+.git/
+.gitignore
+
+# Documentation not needed at runtime
+docs/
+README.md
+
+# Test suite not needed at runtime
+tests/
+
+# Analytics output directory
+analytics/
+
+# uv lockfile (not needed in Docker; pip reads pyproject.toml)
+uv.lock
+
+# Windows artifacts
+Thumbs.db
+Desktop.ini

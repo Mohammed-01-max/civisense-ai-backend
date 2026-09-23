@@ -173,3 +173,19 @@ class AnalyticsSummary(BaseModel):
     top_areas:                dict
     top_issues_globally:      dict
     time_of_day_distribution: dict
+
+
+# ── Notifications ─────────────────────────────────────────────────────────────
+
+class NotificationOut(BaseModel):
+    id: int
+    type: str
+    title: str
+    body: str
+    report_id: Optional[int]
+    is_read: bool
+    created_at: datetime
+
+    class Config:
+        from_attributes = True
+

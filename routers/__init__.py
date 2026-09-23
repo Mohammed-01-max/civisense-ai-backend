@@ -5,4 +5,5 @@ from routers import (
 	analytics_router,
 	authority_router,
 	officer_router,
-)
+	notification_router,
+)

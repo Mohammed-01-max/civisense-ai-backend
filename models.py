@@ -166,3 +166,19 @@ class Image(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     report = relationship("Report")
+
+
+class Notification(Base):
+    __tablename__ = "notifications"
+
+    id = Column(Integer, primary_key=True, index=True)
+    recipient_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
+    type = Column(String, nullable=False)
+    title = Column(String, nullable=False)
+    body = Column(String, nullable=False)
+    report_id = Column(Integer, ForeignKey("reports.id"), nullable=True)
+    is_read = Column(Boolean, nullable=False, default=False)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+    recipient = relationship("User", foreign_keys=[recipient_id])
+    report = relationship("Report", foreign_keys=[report_id])

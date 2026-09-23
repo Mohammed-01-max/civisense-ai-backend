@@ -13,6 +13,7 @@ from routers import (
     analytics_router,
     authority_router,
     officer_router,
+    notification_router,
 )
 from auth import get_current_user
 from config import settings
@@ -43,6 +44,7 @@ app.include_router(analytics_router.router)
 app.include_router(authority_router.router)
 app.include_router(admin_router.router)
 app.include_router(officer_router.router)
+app.include_router(notification_router.router)
 
 
 @app.get("/api/images/{image_id}")
