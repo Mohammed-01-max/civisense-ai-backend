@@ -36,7 +36,7 @@ COPY pyproject.toml ./
 # torch (CPU-only) is pulled transitively by sentence-transformers/transformers.
 # Explicitly prefer the CPU-only torch index to avoid downloading a 2 GB CUDA wheel.
 RUN pip install --no-cache-dir --upgrade pip \
-    && pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu \
+    && pip install --no-cache-dir torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cpu \
     && pip install --no-cache-dir .
 
 # Copy application source code
