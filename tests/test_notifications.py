@@ -30,27 +30,6 @@ os.environ.setdefault(
 os.environ.setdefault("SECRET_KEY", "N7v!2xQ9#Lm4Rk8pW3zD6hJ1cF5yT0uA")
 os.environ.setdefault("CORS_ORIGINS", "http://localhost:8080,http://127.0.0.1:8080")
 
-# ── Pre-stub heavy modules to avoid click/httpx conflict ──────────────────────
-
-if "ultralytics" not in sys.modules:
-    _ul = types.ModuleType("ultralytics")
-    _ul.YOLO = lambda _path: object()
-    sys.modules["ultralytics"] = _ul
-
-# Stub transformers and related to avoid httpx/click crash
-for _m in [
-    "transformers",
-    "transformers.utils",
-    "transformers.utils.hub",
-    "sentence_transformers",
-    "xgboost",
-    "shap",
-    "httpx",
-    "httpx._main",
-]:
-    if _m not in sys.modules:
-        sys.modules[_m] = types.ModuleType(_m)
-
 # ── Import notification_router directly (bypassing routers __init__) ──────────
 
 _BACKEND = pathlib.Path(__file__).parent.parent

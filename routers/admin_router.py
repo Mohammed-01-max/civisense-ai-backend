@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from auth import hash_password, require_admin
@@ -7,6 +7,16 @@ from database import get_db
 import models, schemas
 
 router = APIRouter(prefix="/admin", tags=["admin"])
+
+
+@router.get("/users/count")
+async def get_total_users_count(
+    db: AsyncSession = Depends(get_db),
+    _: models.User = Depends(require_admin),
+):
+    result = await db.execute(select(func.count(models.User.id)))
+    total_users = result.scalar() or 0
+    return {"total_users": total_users}
 
 
 @router.post("/officers", response_model=schemas.OfficerOut, status_code=201)

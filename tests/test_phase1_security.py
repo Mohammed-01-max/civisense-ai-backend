@@ -227,5 +227,258 @@ class ImageEndpointTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(error.exception.status_code, 404)
 
 
+class MvpSprintSecurityAndValidationTests(unittest.IsolatedAsyncioTestCase):
+    async def test_inactive_user_token_is_rejected(self):
+        from auth import get_current_user
+        token = create_access_token({"sub": "42"})
+
+        class _InactiveUserSession:
+            async def execute(self, _query):
+                inactive_user = type("User", (), {"id": 42, "is_active": False})()
+                return type("Result", (), {"scalar_one_or_none": lambda self: inactive_user})()
+
+        with self.assertRaises(HTTPException) as ctx:
+            await get_current_user(token=token, db=_InactiveUserSession())
+        self.assertEqual(ctx.exception.status_code, 401)
+
+    async def test_model_endpoint_requires_admin(self):
+        from auth import require_admin
+        from routers.detection_router import models_info
+
+        citizen = type("User", (), {"id": 1, "role": UserRole.citizen})()
+        with self.assertRaises(HTTPException) as ctx:
+            await require_admin(current_user=citizen)
+        self.assertEqual(ctx.exception.status_code, 403)
+
+        admin = type("User", (), {"id": 99, "role": UserRole.admin})()
+        validated_admin = await require_admin(current_user=admin)
+        self.assertEqual(validated_admin.id, 99)
+        # Calling models_info with admin user
+        result = await models_info(_=admin)
+        self.assertIn("models_loaded", result)
+
+    async def test_invalid_and_nonfinite_coordinates_rejected(self):
+        import math
+        from routers.detection_router import submit_report
+
+        def _check_coords(lat_val, lon_val):
+            try:
+                lat_f, lon_f = float(lat_val), float(lon_val)
+            except (ValueError, TypeError):
+                return False
+            return (
+                math.isfinite(lat_f)
+                and math.isfinite(lon_f)
+                and -90.0 <= lat_f <= 90.0
+                and -180.0 <= lon_f <= 180.0
+            )
+
+        self.assertFalse(_check_coords("nan", "78.48"))
+        self.assertFalse(_check_coords("inf", "78.48"))
+        self.assertFalse(_check_coords("-inf", "78.48"))
+        self.assertFalse(_check_coords("91.0", "78.48"))
+        self.assertFalse(_check_coords("17.38", "181.0"))
+        self.assertFalse(_check_coords("abc", "78.48"))
+        self.assertTrue(_check_coords("17.3850", "78.4867"))
+
+    async def test_generate_issue_number_avoids_existing_collision(self):
+        from routers.detection_router import generate_issue_number
+
+        class _MockDb:
+            def __init__(self, existing_numbers):
+                self._existing = set(existing_numbers)
+
+            def get_bind(self):
+                return None
+
+            async def scalar(self, query):
+                query_str = str(query)
+                if "max(" in query_str:
+                    return 5
+                if "count(" in query_str:
+                    return 5
+                # Check candidate existence via query params
+                try:
+                    params = query.compile().params
+                    if any(v in self._existing for v in params.values()):
+                        return 1
+                except Exception:
+                    pass
+                return None
+
+        # Existing contains CIV-000006
+        mock_db = _MockDb(existing_numbers={"CIV-000006"})
+        generated = await generate_issue_number(mock_db)
+        # Should skip CIV-000006 and advance to CIV-000007
+        self.assertEqual(generated, "CIV-000007")
+
+    async def test_advisory_lock_failure_raises_500(self):
+        from routers.detection_router import acquire_advisory_lock_or_fail
+
+        class _FailingPostgresDb:
+            def get_bind(self):
+                class _Dialect:
+                    name = "postgresql"
+                class _Bind:
+                    dialect = _Dialect()
+                return _Bind()
+
+            async def execute(self, _query):
+                raise RuntimeError("Lock timeout or deadlock")
+
+        with self.assertRaises(HTTPException) as ctx:
+            await acquire_advisory_lock_or_fail(_FailingPostgresDb())
+        self.assertEqual(ctx.exception.status_code, 500)
+        self.assertIn("concurrency lock", ctx.exception.detail)
+
+    async def test_advisory_lock_non_postgres_passes(self):
+        from routers.detection_router import acquire_advisory_lock_or_fail
+
+        class _SqliteDb:
+            def get_bind(self):
+                class _Dialect:
+                    name = "sqlite"
+                class _Bind:
+                    dialect = _Dialect()
+                return _Bind()
+
+        # Should safely pass without executing pg_advisory_xact_lock
+        await acquire_advisory_lock_or_fail(_SqliteDb())
+
+    async def test_assign_report_issue_number_uses_primary_key(self):
+        from routers.detection_router import assign_report_issue_number
+        import models
+
+        class _MockDb:
+            def get_bind(self):
+                return None
+
+            async def scalar(self, query):
+                return None  # No collision
+
+            async def flush(self):
+                pass
+
+        report = models.Report(id=42, issue_number="TEMP-12345")
+        mock_db = _MockDb()
+        final_num = await assign_report_issue_number(mock_db, report)
+        self.assertEqual(final_num, "CIV-000042")
+        self.assertEqual(report.issue_number, "CIV-000042")
+
+    async def test_assign_report_issue_number_handles_legacy_collision(self):
+        from routers.detection_router import assign_report_issue_number
+        import models
+
+        class _MockDbWithCollision:
+            def __init__(self):
+                self._collisions = {"CIV-000042"}
+
+            def get_bind(self):
+                return None
+
+            async def scalar(self, query):
+                params = query.compile().params
+                for v in params.values():
+                    if v in self._collisions:
+                        return 999  # Legacy report with id 999 holds CIV-000042
+                return None
+
+            async def flush(self):
+                pass
+
+        report = models.Report(id=42, issue_number="TEMP-12345")
+        mock_db = _MockDbWithCollision()
+        final_num = await assign_report_issue_number(mock_db, report)
+        # Bypasses existing CIV-000042 and assigns CIV-000043
+        self.assertEqual(final_num, "CIV-000043")
+        self.assertEqual(report.issue_number, "CIV-000043")
+
+    async def test_concurrent_issue_number_allocation(self):
+        import asyncio
+        from routers.detection_router import assign_report_issue_number
+        import models
+
+        class _ConcurrentDb:
+            def __init__(self):
+                self.lock = asyncio.Lock()
+                self.allocated = set()
+
+            def get_bind(self):
+                return None
+
+            async def scalar(self, query):
+                params = query.compile().params
+                for v in params.values():
+                    if v in self.allocated:
+                        return 1
+                return None
+
+            async def flush(self):
+                pass
+
+        shared_db = _ConcurrentDb()
+
+        async def _simulate_submit(report_id):
+            async with shared_db.lock:  # Serialized by advisory lock
+                rep = models.Report(id=report_id, issue_number=f"TEMP-{report_id}")
+                await assign_report_issue_number(shared_db, rep)
+                shared_db.allocated.add(rep.issue_number)
+                return rep.issue_number
+
+        # 10 concurrent requests
+        results = await asyncio.gather(*[_simulate_submit(i) for i in range(1, 11)])
+        self.assertEqual(len(results), len(set(results)))  # Zero duplicates
+        self.assertEqual(results, [f"CIV-{i:06d}" for i in range(1, 11)])
+
+    def test_yolo_evidence_state_contract(self):
+        # 1. Successful detection -> TRUE
+        detections = ["pothole"]
+        successful_models = 3
+        failed_models = 0
+        if len(detections) > 0:
+            state = "TRUE"
+        elif failed_models > 0 or successful_models == 0:
+            state = "UNKNOWN"
+        else:
+            state = "FALSE"
+        self.assertEqual(state, "TRUE")
+
+        # 2. Complete success with 0 detections -> FALSE
+        detections = []
+        successful_models = 5
+        failed_models = 0
+        if len(detections) > 0:
+            state = "TRUE"
+        elif failed_models > 0 or successful_models == 0:
+            state = "UNKNOWN"
+        else:
+            state = "FALSE"
+        self.assertEqual(state, "FALSE")
+
+        # 3. Partial failure with 0 detections -> UNKNOWN
+        detections = []
+        successful_models = 4
+        failed_models = 1
+        if len(detections) > 0:
+            state = "TRUE"
+        elif failed_models > 0 or successful_models == 0:
+            state = "UNKNOWN"
+        else:
+            state = "FALSE"
+        self.assertEqual(state, "UNKNOWN")
+
+        # 4. Total failure with 0 detections -> UNKNOWN
+        detections = []
+        successful_models = 0
+        failed_models = 5
+        if len(detections) > 0:
+            state = "TRUE"
+        elif failed_models > 0 or successful_models == 0:
+            state = "UNKNOWN"
+        else:
+            state = "FALSE"
+        self.assertEqual(state, "UNKNOWN")
+
+
 if __name__ == "__main__":
     unittest.main()

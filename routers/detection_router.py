@@ -1,3 +1,4 @@
+import math
 import os
 import uuid
 import numpy as np
@@ -5,12 +6,12 @@ import logging
 from datetime import datetime, timezone
 from fastapi import APIRouter, Depends, File, Form, UploadFile, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, func
+from sqlalchemy import select, func, text
 from sqlalchemy.orm import selectinload
 
 from database import get_db
 from google_storage import upload_image_to_drive
-from auth import get_current_user
+from auth import get_current_user, require_admin
 from image_validation import read_and_validate_image
 import models, schemas
 
@@ -103,9 +104,9 @@ if _ultralytics_available:
             continue
 
 
-# Expose loaded-models info for easier debugging
+# Expose loaded-models info for administrative diagnostics
 @router.get("/models")
-async def models_info():
+async def models_info(_: models.User = Depends(require_admin)):
     """Return a summary of which .pt files were discovered and class maps."""
     if not _ultralytics_available:
         return {
@@ -165,10 +166,81 @@ def get_area_name(lat: float, lon: float) -> str:
     return "Outside Hyderabad"
 
 
-async def generate_issue_number(db: AsyncSession) -> str:
-    """Returns a sequential issue number like CIV-000042."""
-    count = await db.scalar(select(func.count()).select_from(models.Report))
-    return f"CIV-{(count + 1):06d}"
+CIV_REPORT_SEQUENCE_LOCK_ID = 84920491823901
+
+
+async def acquire_advisory_lock_or_fail(db: AsyncSession) -> None:
+    """Acquires a PostgreSQL transaction-level advisory lock to serialize issue-number allocation.
+
+    If running on PostgreSQL and lock acquisition fails, raises HTTPException 500 to fail
+    the transaction safely rather than proceeding unsafely.
+    Non-PostgreSQL environments (e.g. SQLite / unit tests) explicitly pass.
+    """
+    bind = db.get_bind()
+    dialect_name = getattr(bind.dialect, "name", "") if bind is not None else ""
+    if dialect_name == "postgresql":
+        try:
+            await db.execute(text(f"SELECT pg_advisory_xact_lock({CIV_REPORT_SEQUENCE_LOCK_ID})"))
+        except Exception as lock_err:
+            logger.exception("Failed to acquire PostgreSQL advisory xact lock: %s", lock_err)
+            raise HTTPException(
+                status_code=500,
+                detail="Database concurrency lock could not be acquired. Please retry.",
+            )
+
+
+async def assign_report_issue_number(db: AsyncSession, report: models.Report) -> str:
+    """Assigns an issue number to a flushed report based on its newly allocated primary key.
+
+    Handles legacy issue-number collisions and aligns PostgreSQL sequence if needed.
+    """
+    seq_val = report.id
+    while True:
+        candidate = f"CIV-{seq_val:06d}"
+        existing = await db.scalar(
+            select(models.Report.id).where(
+                models.Report.issue_number == candidate,
+                models.Report.id != report.id,
+            )
+        )
+        if not existing:
+            report.issue_number = candidate
+            break
+        seq_val += 1
+
+    bind = db.get_bind()
+    dialect_name = getattr(bind.dialect, "name", "") if bind is not None else ""
+    if dialect_name == "postgresql" and seq_val > report.id:
+        try:
+            await db.execute(text(f"SELECT setval('reports_id_seq', {seq_val}, true)"))
+        except Exception as seq_err:
+            logger.warning("Could not advance PostgreSQL reports_id_seq: %s", seq_err)
+
+    await db.flush()
+    return report.issue_number
+
+
+async def generate_issue_number(db: AsyncSession, report: models.Report | None = None) -> str:
+    """Returns a unique, sequential issue number like CIV-000042.
+
+    If report is provided (post-flush), bases issue number on its allocated primary key.
+    If report is None, predicts the next sequential number based on max(id).
+    """
+    await acquire_advisory_lock_or_fail(db)
+
+    if report is not None and report.id is not None:
+        return await assign_report_issue_number(db, report)
+
+    max_id = await db.scalar(select(func.coalesce(func.max(models.Report.id), 0))) or 0
+    count = await db.scalar(select(func.count()).select_from(models.Report)) or 0
+    next_num = max(max_id, count) + 1
+
+    while True:
+        candidate = f"CIV-{next_num:06d}"
+        existing = await db.scalar(select(models.Report.id).where(models.Report.issue_number == candidate))
+        if not existing:
+            return candidate
+        next_num += 1
 
 
 # ── Citizen: submit an issue ──────────────────────────────────────────────────
@@ -187,22 +259,39 @@ async def submit_report(
 
     try:
         lat_f, lon_f = float(lat), float(lon)
-    except ValueError:
-        raise HTTPException(status_code=422, detail="lat/lon must be numeric")
+    except (ValueError, TypeError):
+        raise HTTPException(
+            status_code=422,
+            detail="Latitude and longitude must be valid numeric values.",
+        )
+
+    if not (
+        math.isfinite(lat_f)
+        and math.isfinite(lon_f)
+        and -90.0 <= lat_f <= 90.0
+        and -180.0 <= lon_f <= 180.0
+    ):
+        raise HTTPException(
+            status_code=422,
+            detail="Latitude must be between -90 and 90, and longitude between -180 and 180.",
+        )
 
     # Validate the upload before it reaches the expensive inference path.
     contents, img, mime_type, file_ext = await read_and_validate_image(file)
     img_np = np.array(img)
 
     detected_raw: set[str] = set()
-    yolo_failed = False
+    total_models = len(yolo_models)
+    successful_models = 0
+    failed_models = 0
 
-    if not yolo_models:
-        yolo_failed = True
+    if total_models == 0:
+        yolo_evidence_state = "UNKNOWN"
     else:
         for model in yolo_models:
             try:
                 results = model(img_np, conf=0.4, verbose=False)
+                successful_models += 1
 
                 for r in results:
                     for box in r.boxes:
@@ -217,19 +306,21 @@ async def submit_report(
 
                         if confidence >= required_conf:
                             detected_raw.add(class_name)
-            except Exception:
-                logger.exception("YOLO inference failed")
-                yolo_failed = True
-                break
+            except Exception as model_exc:
+                failed_models += 1
+                logger.exception("Inference failed for YOLO model: %s", model_exc)
+                continue
 
-    final_issues = [CLASS_MAPPING.get(cls, cls) for cls in detected_raw]
+        final_issues = [CLASS_MAPPING.get(cls, cls) for cls in detected_raw]
 
-    if yolo_failed:
-        yolo_evidence_state = "UNKNOWN"
-    elif len(final_issues) > 0:
-        yolo_evidence_state = "TRUE"
-    else:
-        yolo_evidence_state = "FALSE"
+        if len(final_issues) > 0:
+            yolo_evidence_state = "TRUE"
+        elif failed_models > 0 or successful_models == 0:
+            # Partial or total model failure with zero detections cannot be safely confirmed as negative
+            yolo_evidence_state = "UNKNOWN"
+        else:
+            # All models executed cleanly and none found any target objects
+            yolo_evidence_state = "FALSE"
 
     # AI complaint triage from the optional citizen description.
     # Empty descriptions and model failures intentionally degrade gracefully.
@@ -271,11 +362,15 @@ async def submit_report(
         service_department=routing_result.service_department,
     )
 
-    # Persist report first (without image URL)
-    issue_number = await generate_issue_number(db)
+    # Acquire advisory lock to serialize issue-number assignment within this transaction
+    await acquire_advisory_lock_or_fail(db)
+
+    # Persist report first with a collision-free temporary issue number
+    # to obtain the real database-allocated primary key (id) from the sequence.
+    temp_issue_number = f"TEMP-{uuid.uuid4().hex}"
 
     report = models.Report(
-        issue_number=issue_number,
+        issue_number=temp_issue_number,
         user_id=current_user.id,
         latitude=lat_f,
         longitude=lon_f,
@@ -319,6 +414,9 @@ async def submit_report(
     db.add(report)
     await db.flush()
 
+    # Finalize permanent issue number derived from newly allocated primary key (report.id)
+    await assign_report_issue_number(db, report)
+
     # Store the image in database and get the URL
     try:
         image_url = await upload_image_to_drive(
@@ -330,10 +428,11 @@ async def submit_report(
         )
         report.image_url = image_url
     except Exception as exc:
+        logger.exception("Failed to upload report image: %s", exc)
         await db.rollback()
         raise HTTPException(
             status_code=500,
-            detail=f"Failed to upload report image: {exc}",
+            detail="Failed to upload and store report image.",
         )
 
     for issue in final_issues:
