@@ -160,19 +160,31 @@ class ImageValidationTests(unittest.IsolatedAsyncioTestCase):
 class ImageAccessTests(unittest.TestCase):
     def test_citizen_cannot_view_another_citizens_image(self):
         user = type("User", (), {"id": 1, "role": UserRole.citizen})()
-        report = type("Report", (), {"user_id": 2})()
+        report = type("Report", (), {"user_id": 2, "assigned_officer_id": None})()
         with self.assertRaises(HTTPException) as error:
             require_image_access(user, report)
         self.assertEqual(error.exception.status_code, 404)
 
     def test_owner_admin_and_authority_can_view_image(self):
-        report = type("Report", (), {"user_id": 1})()
+        report = type("Report", (), {"user_id": 1, "assigned_officer_id": None})()
         owner = type("User", (), {"id": 1, "role": UserRole.citizen})()
         admin = type("User", (), {"id": 2, "role": UserRole.admin})()
         authority = type("User", (), {"id": 3, "role": UserRole.authority})()
         require_image_access(owner, report)
         require_image_access(admin, report)
         require_image_access(authority, report)
+
+    def test_assigned_officer_can_view_image(self):
+        report = type("Report", (), {"user_id": 1, "assigned_officer_id": 4})()
+        assigned_officer = type("User", (), {"id": 4, "role": UserRole.officer})()
+        require_image_access(assigned_officer, report)
+
+    def test_unassigned_officer_cannot_view_image(self):
+        report = type("Report", (), {"user_id": 1, "assigned_officer_id": 4})()
+        unassigned_officer = type("User", (), {"id": 5, "role": UserRole.officer})()
+        with self.assertRaises(HTTPException) as error:
+            require_image_access(unassigned_officer, report)
+        self.assertEqual(error.exception.status_code, 404)
 
 
 class _ImageQueryResult:
